@@ -1,0 +1,18 @@
+services:
+  shmarql:
+    image: "${SHMARQL_IMAGE:-registry.gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/shmarql/datastories}"
+    container_name: "${SHMARQL_CONTAINER_NAME:-shmarql}"
+    restart: unless-stopped
+    environment:
+      - "TZ=Europe/Berlin"
+      - "SCHEME=${SHMARQL_SCHEME:-http://}"
+      - "DOMAIN=${SHMARQL_DOMAIN:-localhost}"
+      - "PORT=7014"
+      - "ENDPOINT=https://nfdi4culture.de/sparql"
+      - "DEBUG=1"
+      - "WATCH_DOCS=1"
+    volumes:
+      - ./stories:/src/docs/course
+      - ./navigation.yml:/src/docs/.nav.yml
+    ports:
+      - "7015:8000"
