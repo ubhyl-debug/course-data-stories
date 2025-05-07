@@ -8,7 +8,7 @@ services:
       - "SCHEME=${SHMARQL_SCHEME:-http://}"
       - "DOMAIN=${SHMARQL_DOMAIN:-localhost}"
       - "PORT=7014"
-      - "ENDPOINT=https://nfdi4culture.de/sparql"
+      - "ENDPOINT=https://datastoriesnfdi4c.ise.fiz-karlsruhe.de/sparql"
       - "DEBUG=1"
       - "WATCH_DOCS=1"
     volumes:
