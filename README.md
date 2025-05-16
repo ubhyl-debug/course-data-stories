@@ -30,7 +30,7 @@ This should show the text that was just entered in the 'index.md' file you creat
 
 ## More details
 
-The source files for the production NFDI4CUlrture Datastories repository can be found at the following URI:
+The source files for the production NFDI4CUlture Datastories repository can be found at the following URI:
 https://gitlab.rlp.net/adwmainz/nfdi4culture/knowledge-graph/shmarql/datastories
 
 You can view the source for more details on how to create your own data stories here.
