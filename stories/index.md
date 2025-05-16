@@ -5,7 +5,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 ## With a SPARQL query
 
-```sparql
+```sparql linenums="1" title="Example query"
 # List of research data portals
 PREFIX fabio: <http://purl.org/spar/fabio/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
