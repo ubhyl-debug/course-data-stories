@@ -28,7 +28,9 @@ Ase methodolgy artefial intalagent (AI) based aproches such as Large Languge Mod
 
 ![alt text](partitura-federation-1.png)
 
-Das Bild ist ein Platzhalter für unsere Darstellung, wie die Daten fließen.
+<div style="background-color: #fff3cd; padding: 10px; border: 1px solid #ffeeba; border-radius: 4px;">
+<strong>Hinweis:</strong> Das Bild ist ein Platzhalter für unsere Darstellung, wie die Daten fließen.
+</div>
 
 
 ## OCR and its potential errors
@@ -85,10 +87,45 @@ It is important to note that perplexity remains a heuristic measure, as next-tok
 
 Nevertheless, perplexity provides a useful and consistent proxy for evaluating relative text quality when annotated ground truth is unavailable.
 
-
 ### OCR text quality
 
-The perplexity in this data story was derived using the following language models: `distilgpt2`, `dbmdz/german-gpt2`, `google/byt5-small`, and `bert-base-german-cased`.
+The perplexity in this data story was derived using the following language models from Hugging Face: `distilgpt2`, `dbmdz/german-gpt2`, `google/byt5-small`, and `bert-base-german-cased`.
+
+```
+def get_perplexity(text: str):
+    inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=512)
+    input_ids = inputs["input_ids"].to(device) 
+    with torch.no_grad():
+        outputs = model(input_ids, labels=input_ids)
+        loss = outputs.loss
+    return torch.exp(loss).item()
+```
+
+For each sampled text snippet (up to 512 tokens), the model was evaluated in inference mode, comparing the input sequence against itself as the prediction target. Internally, the model computes the cross-entropy loss over the token sequence, but instead of returning individual token-level losses, it uses the average loss over all tokens in the snippet. This average loss is then exponentiated to yield a single perplexity score per text snippet:
+
+$$
+Perplexity(x)=exp(L(x))
+$$
+
+where $L(x)$ is the mean negative log-likelihood across the tokens in the snippet $x$.
+
+To use computing resources efficiently, perplexity was computed over the period January to May 1933, and from that set, $1.5\%$ was randomly selected for evaluation.
+
+As mentioned in section [OCR and its potential errors](#ocr-and-its-potential-errors), OCR text from post-war newspapers is assumed to have higher accuracy, as most articles are written in the classical Latin alphabet. Therefore, articles from the period 1980–1994 were used, with $20\%$ of that set selected to compute perplexity.
+
+Note that, due to copyright constraints, more articles from 1933 are available than from 1980–1994. This explains the difference in sampling rates between the two periods.
+
+<div style="background-color: #fff3cd; padding: 10px; border: 1px solid #ffeeba; border-radius: 4px;">
+<strong>Hinweis:</strong> Zum aktuellen Zeitpunkt (06/2025) wurde die Perplexity so ausgerechnet. Eine größere Stichprobe könnte bei Bedarf erneut durchgeführt werden
+</div>
+
+| Model             | 1933 Period (01/1933–05/1933) | 1980–1994 Period (01/1980–05/1994) | Ratio |
+| ----------------- | ----------------------------- | ---------------------------------- | ----- |
+| distilgpt2        | 195.37                        | 132.82                             | 1.47  |
+| dbmdz/german-gpt2 | 236.74                        | 91.34                              | 2.58  |
+| google/byt5-small | 1,971,675.58                  | 552,495.41                         | 3.57  |
+
+The substantial increase in perplexity for the 1933 dataset compared to the 1980–1994 dataset suggests that data quality, such as OCR errors, may significantly affect language model performance. However, as already discussed in section [OCR and its potential errors](#ocr-and-its-potential-errors), this may also result from the language model, which may understand fewer historical contexts.
 
 ## Quantifying the perspective of a news article distorts the Nazi regime
 
