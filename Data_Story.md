@@ -77,13 +77,13 @@ $$
 
 These metrics depend on a crucial prerequisite: the availability of a ground truth that defines the correct version of the text. Without such a reference, it is impossible to determine which tokens or characters are true positives or false positives.
 
-Due to the extensive volume of articles, a corresponding ground truth is not available, rendering manual annotation infeasible. Consequently, Datastorie employs perplexity as a heuristic metric to evaluate the relative quality of textual data across different historical periods.
+Due to the extensive volume of articles, a corresponding ground truth is not available, rendering manual annotation infeasible. Consequently, this Datastorie employs perplexity as a heuristic metric to evaluate the relative quality of textual data across different historical periods.
 
 Perplexity measures the confidence of a NLP in predicting subsequent tokens within a text. Lower perplexity values can correlate with higher text quality. To illustrate, consider the following example from 1936: _"Diplomatenempfänge beim..."_ ("Diplomatic receptions at the..."), compared to a distorted version: _"Tiptomniedempfunge deim..."_. 
 
 As most readers would find it easier to predict the next word in the clearer phrase, a language model similarly exhibits higher confidence, reflected by lower perplexity, when processing less degraded, more coherent text. Thus, perplexity serves as a practical, though indirect, proxy for text quality in the absence of annotated ground truth.
 
-It is important to note that perplexity remains a heuristic measure, as next-token prediction confidence also depends on how effectively a language model interprets textual context. Linguistically complex texts-such as poetry from earlier historical periods containing metaphorical content or unconventional language use-may yield elevated perplexity scores, despite being of high literary quality.
+It is important to note that perplexity remains a heuristic measure, as next-token prediction confidence also depends on how effectively a language model interprets textual context. Linguistically complex texts-such as newspaper from historical periods containing unconventional language use may yield elevated perplexity scores, despite being of high OCR text quality.
 
 Nevertheless, perplexity provides a useful and consistent proxy for evaluating relative text quality when annotated ground truth is unavailable.
 
