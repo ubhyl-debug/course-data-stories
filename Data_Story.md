@@ -129,6 +129,137 @@ The substantial increase in perplexity for the 1933 dataset compared to the 1980
 
 ## Quantifying the perspective of a news article distorts the Nazi regime
 
+### Data scope
+
+This data study investigates newspaper articles published between 1920 and 1945. The full corpus of articles from this period comprises over 160 gigabytes of text, excluding the digitized source materials from which the text was extracted using OCR.
+
+To refine the dataset to the most consistently active and prolific publishers, only newspapers that were in continuous operation for at least 12 years and published a minimum of 500 articles per year were retained.
+
+Applying these criteria resulted in a selection of 101 newspapers, representing a total data volume of over 29 gigabytes.
+
+1. Sauerländisches Volksblatt : aeltester Anzeiger des Sauerlandes : ueber 100 Jahre Heimat- und Kreisblatt im Kreise Olpe : Tageszeitung für Politik, Unterhaltung und Belehrung
+2. Riesaer Tageblatt und Anzeiger : (Elbeblatt und Anzeiger) : amtliche Bekanntmachungen für die Stadt und den Landkreis Riesa
+3. Frankenberger Tageblatt, Bezirks-Anzeiger : Amtsblatt für die königliche Amtshauptmannschaft Flöha, das königliche Amtsgericht und den Stadtrat zu Frankenberg i. Sa
+4. Der Grafschafter. 1914-1945
+5. Schwäbischer Merkur : mit Schwäbischer Kronik und Handelszeitung : Süddeutsche Zeitung
+6. Wittener Tageblatt : verbunden mit der Annener Zeitung
+7. Velberter Zeitung : Nevigeser Volkszeitung : Heiligenhauser Zeitung
+8. Rheinisches Volksblatt : Hildener Zeitung und Tageblatt : Hildener Rundschau
+9. Gießener Anzeiger : General-Anzeiger für Oberhessen
+10. Mitteldeutsche Nationalzeitung
+11. Oberkasseler Zeitung : Heimatzeitung für Oberkassel, Ober- und Niederdollendorf und Römlinghoven
+12. Wittener Volks-Zeitung : verbunden mit dem "Wittener Lokal-Anzeiger"
+13. Hallische Nachrichten : General-Anzeiger für Halle und die Provinz Sachsen
+14. Aachener Anzeiger : politisches Tageblatt : beliebtes und wirksames Anzeigenblatt der Stadt und der Regierungsbezirks
+15. Durlacher Tagblatt : Heimatblatt für die Stadt und den früheren Amtsbezirk Durlach; Pfinztäler Bote für Grötzingen, Berghausen, Söllingen, Wöschbach u. Kleinsteinbach
+16. Stadtanzeiger für Castrop-Rauxel und Umgebung : Castroper Zeitung, Rauxeler Neueste Nachrichten, Bladenhorster Tageblatt : amtliches Veröffentlichungsblatt für den Landgerichtsbezirk Dortmund, allgemeindes Kreisblatt für den Stadtkreis Castrop-Rauxel
+17. Schwerter Zeitung : Heimatblatt für die Stadt Schwerte und die Ämter Westhofen und Ergste : einzige in Schwerte gedruckte Zeitung
+18. Dresdner Nachrichten
+19. Hamburger Fremdenblatt, Abendausgabe
+20. Sächsische Volkszeitung : für christliche Politik und Kultur
+21. Eibenstocker Tageblatt : Anzeiger für den Amtsgerichtsbezirk Eibenstock und dessen Umgebung, umfassend die Ortschaften Eibenstock, Blauenthal, Carlsfeld, Hundshübel, Neuheide, Oberstützengrün, Schönheide, Schönheiderhammer, Sosa, Unterstützengrün, Wildenthal, Wilzschhaus, Wolfsgrün usw
+22. Wilhelmsburger Zeitung : das Echo der Elbinsel : die Stimme deiner Heimat
+23. Der Erft-Bote. 1890-1950
+24. Westfälische Zeitung : Bielefelder Tageblatt
+25. Kölnische Zeitung. 1803-1945
+26. Rhein- und Ruhrzeitung : Tageszeitung für das niederrheinische Industriegebiet und den linken Niederrhein : das Blatt der westdeutschen Binnenschiffahrt
+27. Deutscher Reichsanzeiger und Preußischer Staatsanzeiger
+28. Erzgebirgischer Volksfreund : mit Schwarzenberger Tageblatt
+29. Rheinisch-Bergische Zeitung : Heidersche Zeitung ; ältestes Blatt des Rheinisch-Bergischen Kreises
+30. Bergische Post. 1924-1941
+31. Honnefer Volkszeitung. 1889-1978
+32. Sächsische Elbzeitung : Tageblatt für die Sächsische Schweiz
+33. Börsenblatt für den deutschen Buchhandel : bbb ; Fachzeitschr. für Verlagswesen u. Buchhandel
+34. Hamburger Tageblatt : Zeitung der Nationalsozialistischen Deutschen Arbeiterpartei
+35. Solinger Tageblatt : die Nachmittagszeitung der Klingenstadt : aelteste Tageszeitung im Stadtkreis Solingen
+36. Annener Zeitung : verbunden mit der Annener Volkszeitung : Anzeigenblatt für Witten-Annen und die Stadtteile Rüdinghausen, Stockum und Düren
+37. Ohligser Anzeiger : Ohligser Zeitung und Tageblatt ; einzige in Ohligs erscheinende Tageszeitung
+38. Bergische Wacht. 1907-1941
+39. Schwäbischer Merkur ; [...] ; Wochenausgabe für das Ausland
+40. Der sächsische Erzähler : Bischofswerdaer Tageblatt ; (Tageblatt für Bischofswerda, Neukirch und Umgebung)
+41. Echo des Siebengebirges. 1873-1941
+42. General-Anzeiger. 1889-1945
+43. Stuttgarter neues Tagblatt : südwestdeutsche Handels- und Wirtschafts-Zeitung
+44. Haaner Zeitung. 1928-1941
+45. Bergische Landes-Zeitung. 1931-1945
+46. Dresdner neueste Nachrichten
+47. Marbacher Zeitung : Bottwartal-Bote
+48. Zwönitztaler Anzeiger
+49. Der Bote vom Geising und Müglitztal-Zeitung : Bezirksanzeiger für Altenberg, Geising, Lauenstein, Bärenstein und die umliegenden Ortschaften
+50. Harburger Anzeigen und Nachrichten
+51. Neckar-Bote : Heimatzeitung für Seckenheim und Umgebung
+52. Bergheimer Zeitung. 1905-1943
+53. Internationale Literatur
+54. Dresdner Nachrichten, 01-Frühausgabe
+55. Merseburger Korrespondent : mitteldeutsche neueste Nachrichten
+56. Godesberger Volkszeitung. 1913-1933
+57. Niederrheinisches Tageblatt : Kempener Volkszeitung : Kempener Zeitung : Lobbericher Tageblatt : Heimatzeitung für den linken Niederrhein
+58. Dortmunder Zeitung. 1874-1939
+59. Sächsische Staatszeitung : Staatsanzeiger für den Freistaat Sachsen
+60. Bergische Zeitung. 1922-1935
+61. Sächsische Dorfzeitung und Elbgaupresse : mit Loschwitzer Anzeiger ; Tageszeitung für das östliche Dresden u. seine Vororte
+62. Viernheimer Anzeiger : Viernheimer Zeitung : Viernheimer Tageblatt : Viernheimer Nachrichten : Viernheimer Bürger-Ztg. : Viernh. Volksblatt
+63. Central-Volksblatt für das gesamte Sauerland : Arnsberger Zeitung : Sauerländer Bote
+64. Duisburger General-Anzeiger. 1914-1935
+65. Wochenblatt für Zschopau und Umgegend : Zschopauer Tageblatt u. Anzeiger
+66. Riedlinger Zeitung : Tag- und Anzeigeblatt für den Bezirk Riedlingen
+67. Echo der Gegenwart. 1848-1935
+68. Vorwärts
+69. Langenberger Zeitung. 1888-1935
+70. Dresdner Nachrichten, 02-Abendausgabe
+71. Westfälische neueste Nachrichten mit Bielefelder General-Anzeiger und Handelsblatt
+72. Anzeiger vom Oberland : Tageszeitung für das Oberamt Biberach und die Stadtgemeinde Biberach
+73. Bottwartal-Bote : Amtsblatt für die Stadt Grossbottwar : Beilsteiner Zeitung, Mundelsheimer Nachrichten, Oberstenfelder Anzeiger
+74. Weißeritz-Zeitung : Tageszeitung und Anzeiger für Dippoldiswalde, Schmiedeberg u. U.
+75. Sozialdemokrat
+76. Der Landbote : Anzeiger für den Amtsbezirk Sinsheim und Umgebung
+77. Laupheimer Verkündiger : verbunden mit dem Laupheimer Volksblatt
+78. Karlsruher Zeitung
+79. Hamburger Volkszeitung : kommunistische Tageszeitung für Hamburg und Umgebung
+80. Verbo Schussen-Bote : Oberschw. Morgenblatt
+81. Deutsche Reichs-Zeitung. 1871-1934
+82. Saale-Zeitung : allgemeine Zeitung für Mitteldeutschland ; Hallesche neueste Nachrichten
+83. Der Rottumbote: amtliches und private Anzeigeblatt für Ochsenhausen und Umgebung
+84. Hörder Volksblatt. 1884-1934
+85. Süddeutsche Zeitung : für deutsche Politik und Volkswirtschaft
+86. Die Glocke. 1885-1933
+87. Merseburger Tageblatt : Kreisblatt ; mit den amtlichen Bekanntmachungen des Stadt- und Landkreises Merseburg
+88. Aufwärts : christliches Tageblatt
+89. Iserlohner Kreisanzeiger und Zeitung. 1898-1949
+90. Volkswacht : Organ der Sozialdemokratie für das östl. Westfalen und die lippischen Freistaaten
+91. Nachrichten für Naunhof und Umgegend : (Albrechtshain, Ammelshain, Beucha, Borsdorf, Eicha, Erdmannshain, Fuchshain, Groß- und Kleinsteinberg, Klinga, Köhra, Lindhardt, Pomßen, Staudnitz, Threna usw.)
+92. Bergedorfer Zeitung : unabhängig, überparteilich ; mit amtl. Bekanntmachungen
+93. Westdeutsche Landeszeitung : Gladbacher Volkszeitung und Handelsblatt : allgemeiner Anzeiger für den gesamten Niederrhein : die Niederrheinische Heimatzeitung
+94. Dorstener Volkszeitung. 1919-1933
+95. Rheinisches Volksblatt
+96. Hildener Rundschau. 1924-1936
+97. Bürener Zeitung. 1896-1935
+98. Karlsruher Tagblatt
+99. Münsterischer Anzeiger : Westfälischer Merkur : Münsterische Volkszeitung : amtliches Organ des Gaues Westfalen-Nord der NSDAP und sämtlicher Behörden
+100. Buchauer Zeitung Volksblatt vom Federsee : Amtsblatt für die städt. Behörden Buchaus
+101. Bünder Tageblatt. 1901-1942
+
+
+From there, 10 newspapers were selected manually. For each newspaper, up to 50 articles per month were randomly sampled between 1923-1945, provided that more than 50 articles were available for that month.
+
+1. Kölnische Zeitung. 1803-1945  
+2. Deutscher Reichsanzeiger und Preußischer Staatsanzeiger  
+3. Vorwärts  
+4. Hamburger Tageblatt : Zeitung der Nationalsozialistischen Deutschen Arbeiterpartei  
+5. Münsterischer Anzeiger : Westfälischer Merkur : Münsterische Volkszeitung : amtliches Organ des Gaues Westfalen-Nord der NSDAP und sämtlicher Behörden  
+6. Süddeutsche Zeitung : für deutsche Politik und Volkswirtschaft  
+7. Stuttgarter neues Tagblatt : südwestdeutsche Handels- und Wirtschafts-Zeitung  
+8. Dresdner Nachrichten  
+9. Dresdner neueste Nachrichten  
+10. Schwäbischer Merkur : mit Schwäbischer Kronik und Handelszeitung : Süddeutsche Zeitung  
+
+The remaining 104.236 articles have a size of around 2.2 gigabytes.
+
+![alt text](articles_per_month.svg)
+
+![alt text](place_of_distribution.svg)
+
+
 ### Model...
 
 
