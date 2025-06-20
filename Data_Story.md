@@ -260,7 +260,27 @@ The remaining 104.236 articles have a size of around 2.2 gigabytes.
 ![alt text](place_of_distribution.svg)
 
 
-### Model...
+### Model
+
+To analyze the semantic content of historical newspaper articles with regard to resistance against the rise of the NSDAP, we sought a model that was both computationally efficient and semantically robust. While large language models (LLMs) such as GPT-4 offer impressive capabilities, they are often overkill for well-bounded, document-level tasks and pose challenges in terms of interpretability, resource consumption, and reproducibility.
+
+Instead, we selected a keyword-based transformer model, specifically bert-base-german-cased. This model has been pretrained on a large corpus of German text and offers strong performance in sentence and document-level semantic understanding, especially for classification and regression tasks. It provides a more efficient and transparent alternative to autoregressive LLMs, making it well-suited for historical and humanities-oriented research.
+
+However, BERT models by default are structured for classification, meaning they output a set of logits corresponding to discrete classes. Since our research question required a more nuanced, continuous score (e.g., how strongly an article expressed resistance), we needed a numerical output rather than a categorical label. In machine learning terms, this meant transforming the model from a classifier into a regressor.
+
+To achieve this, we modified the model architecture by:
+
+Using AutoModelForSequenceClassification from the Hugging Face Transformers library,
+
+Setting num_labels=1 to indicate a single continuous output,
+
+Defining the problem_type as regression so that the model would use a mean squared error loss function during training,
+
+Feeding the [CLS] token embedding into a linear regression head (nn.Linear) to generate scalar predictions.
+
+This allowed us to train the model to predict a real-valued score for each article, representing the degree of resistance it contained. The result was a lightweight, reproducible semantic analysis model capable of scoring textual content with continuous values, suitable for aggregating and visualizing historical trends across time and location.
+
+This approach bridged the gap between traditional classification tasks and the need for gradated semantic interpretation, providing us with a scientifically sound and technically feasible solution.
 
 
 ## Summary
