@@ -283,6 +283,8 @@ This approach bridged the gap between traditional classification tasks and the n
 
 ## Summary
 
+This data story investigates the dual challenge of analyzing historical news articles from the Nazi era: first, assessing the OCR text quality of scanned newspapers (1920–1945), and second, quantifying the stance of these articles toward the Nazi regime. Using transformer-based language models, the project employs perplexity as a proxy metric for OCR accuracy and fine-tunes bert-base-german-cased for regression to generate continuous scores representing article sentiment. These scores enable clustering and visualization of ideological perspectives across different newspapers, shedding light on patterns of support or resistance to the NSDAP in the media landscape of the time.
+
 ## With a SPARQL query
 
 ```sparql linenums="1" title="Example query"
