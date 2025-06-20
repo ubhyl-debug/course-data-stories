@@ -22,7 +22,7 @@ The Research question are seperated in two diffrent blocks:
 2. What are the criteria to define what stance an article had toward the NS regime?
 3. How can the stance toward the NS regime be quantified?
 
-Ase methodolgy artefial intalagent (AI) based aproches such as Large Languge Models (LLMs) are used to quantify OCR text quality and drive scores to quantify articals regarding ther perspectiv. These scoring systems included Models such as distilgpt2, dbmdz/german-gpt2, google/byt5-small and bert-base-german-cased.
+As methodology Artifcial Inteligence (AI) based approaches such as Large Language Models (LLMs) are used to quantify OCR text quality and drive scores to quantify articles regarding their perspective. These scoring systems included Models such as distilgpt2, dbmdz/german-gpt2, google/byt5-small and bert-base-german-cased.
 
 [//]: <  ![alt text](partitura-federation-1.png)>
 
