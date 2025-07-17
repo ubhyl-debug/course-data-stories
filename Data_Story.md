@@ -22,7 +22,7 @@ The Research question are seperated in two diffrent blocks:
 2. What are the criteria to define what stance an article had toward the NS regime?
 3. How can the stance toward the NS regime be quantified?
 
-Ase methodolgy artefial intalagent (AI) based aproches such as Large Languge Models (LLMs) are used to quantify OCR text quality and drive scores to quantify articals regarding ther perspectiv. These scoring systems included Models such as distilgpt2, dbmdz/german-gpt2, google/byt5-small and bert-base-german-cased.
+As methodology Artifcial Inteligence (AI) based approaches such as Large Language Models (LLMs) are used to quantify OCR text quality and drive scores to quantify articles regarding their perspective. These scoring systems included Models such as distilgpt2, dbmdz/german-gpt2, google/byt5-small and bert-base-german-cased.
 
 [//]: <  ![alt text](partitura-federation-1.png)>
 
@@ -260,10 +260,30 @@ The remaining 104.236 articles have a size of around 2.2 gigabytes.
 ![alt text](place_of_distribution.svg)
 
 
-### Model...
+### Model
+
+To analyze the semantic content of historical newspaper articles with regard to resistance against the rise of the NSDAP, we sought a model that was both computationally efficient and semantically robust. While large language models (LLMs) such as GPT-4 offer impressive capabilities, they are often overkill for well-bounded, document-level tasks and pose challenges in terms of interpretability, resource consumption, and reproducibility.
+
+Instead, we selected a keyword-based transformer model, specifically `bert-base-german-cased`. This model has been pretrained on a large corpus of German text and offers strong performance in sentence and document-level semantic understanding, especially for classification and regression tasks. It provides a more efficient and transparent alternative to autoregressive LLMs, making it well-suited for historical and humanities-oriented research.
+
+However, BERT models by default are structured for classification, meaning they output a set of logits corresponding to discrete classes. Since our research question required a more nuanced, continuous score (e.g., how strongly an article expressed resistance), we needed a numerical output rather than a categorical label. In machine learning terms, this meant transforming the model from a classifier into a regressor.
+
+To achieve this, we modified the model architecture by:
+
+* Using `AutoModelForSequenceClassification` from the Hugging Face Transformers library.
+* Setting `num_labels=1` to indicate a single continuous output.
+* Defining the `problem_type="regression"` so that the model would use a mean squared error (MSE) loss function during training.
+* Feeding the `[CLS]` token embedding into a linear regression head (`nn.Linear`) to generate scalar predictions.
+
+This allowed us to train the model to predict a real-valued score for each article, representing the degree of resistance it contained. The result was a lightweight, reproducible semantic analysis model capable of scoring textual content with continuous values, suitable for aggregating and visualizing historical trends across time and location.
+
+This approach bridged the gap between traditional classification tasks and the need for gradated semantic interpretation, providing us with a scientifically sound and technically feasible solution.
+
 
 
 ## Summary
+
+This data story investigates the dual challenge of analyzing historical news articles from the Nazi era: first, assessing the OCR text quality of scanned newspapers (1920–1945), and second, quantifying the stance of these articles toward the Nazi regime. Using transformer-based language models, the project employs perplexity as a proxy metric for OCR accuracy and fine-tunes bert-base-german-cased for regression to generate continuous scores representing article sentiment. These scores enable clustering and visualization of ideological perspectives across different newspapers, shedding light on patterns of support or resistance to the NSDAP in the media landscape of the time.
 
 ## With a SPARQL query
 
