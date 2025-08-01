@@ -312,6 +312,15 @@ In the case of the Hamburger Abendblatt, the data reveals a more supportive stan
 
 ## Mapping of Historical Events
 
+<figure>
+  <p><a>
+    <img alt="historical_events.svg" src="historical_events.svg">
+  </a></p>
+  <figcaption>
+    <p>Historical Events
+  </figcaption>
+</figure>
+
 - @Maren: Hier bitte kurz deine Peaks und die dazu identifizierien Historischen Events aufzeigen
 - Observed a change in reporting after historical events or during them (!Descriptive non-judgmental!)
 
