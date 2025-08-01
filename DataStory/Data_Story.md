@@ -57,7 +57,10 @@ To refine the dataset to the most consistently active and prolific publishers, o
 
 Applying these criteria resulted in a selection of 101 newspapers, representing a total data volume of over 29 gigabytes.
 
-<div style="height: 300px; overflow-y: scroll; border: 1px solid #ccc; padding: 1em;">
+<details>
+<summary>List of 101 newspapers:</summary>
+
+<br>
 
 1. Sauerländisches Volksblatt : aeltester Anzeiger des Sauerlandes : ueber 100 Jahre Heimat- und Kreisblatt im Kreise Olpe : Tageszeitung für Politik, Unterhaltung und Belehrung
 2. Riesaer Tageblatt und Anzeiger : (Elbeblatt und Anzeiger) : amtliche Bekanntmachungen für die Stadt und den Landkreis Riesa
@@ -160,7 +163,7 @@ Applying these criteria resulted in a selection of 101 newspapers, representing 
 99. Münsterischer Anzeiger : Westfälischer Merkur : Münsterische Volkszeitung : amtliches Organ des Gaues Westfalen-Nord der NSDAP und sämtlicher Behörden
 100. Buchauer Zeitung Volksblatt vom Federsee : Amtsblatt für die städt. Behörden Buchaus
 101. Bünder Tageblatt. 1901-1942
-</div>
+</details>
 
 <p></p>
 From there, three newspapers were selected manually. For each newspaper, up to 50 articles per month were randomly sampled between 1923-1945, provided that more than 50 articles were available for that month.
