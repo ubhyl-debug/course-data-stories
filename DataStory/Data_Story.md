@@ -24,9 +24,19 @@ The data story focuses on analyzing how historical newspapers positioned themsel
 # Research questions
 
 
-1. How did newspaper stances toward the NSDAP change between 1923 and 1945?
-2. Can LLMs detect support or criticism of the NSDAP in historical newspapers?
-3. How did key political events affect media sentiment toward the NSDAP?
+The Research question are seperated in two diffrent blocks:
+
+**Noise**
+
+1. How can noise/errors in the OCR text be defined and measured?
+2. How can noise/errors in the OCR text be handled and mitigated?
+
+**Scoring**
+
+1. What are the relevant articles to determine what stance a newspaper had toward the NS regime?
+2. What are the criteria to define what stance an article had toward the NS regime?
+3. How can the stance toward the NS regime be quantified?
+
 
 
 
