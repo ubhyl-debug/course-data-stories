@@ -194,7 +194,7 @@ The remaining 25,234 articles have a size of around 500 megabyte.
 
 When looking at potential LLMs, we consider different metrics to decide on applicability. These metrics are sorted into high and medium priorities categories and form the basis on which the LLM is selected.
 
-| Metric          | Priorität | Description                                                                                                                                         |
+| Metric          | Priority | Description                                                                                                                                         |
 |-----------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Licence         | medium    | To ensure reproducibility for future researchers, a public and open-source license is desirable.                                                   |
 | MMLU            | high      | Since LLMs are faced with understanding sometimes complicated news articles, a high MMLU (LLM benchmark) is important.                             |
@@ -387,4 +387,5 @@ Additionally, the difficulty in assessing the quality and accuracy of LLM-genera
 Nevertheless, the approach has shown that LLMs can be valuable tools in historical media analysis, especially for scaling initial explorations across large datasets. It can enable historians, researchers, and the public to surface trends, identify anomalies, and formulate more focused research questions. Future extensions might include more sophisticated OCR error correction, model fine-tuning on historical German language, and closer integration of event data to improve interpretability.
 
 In short, while fully automated historical interpretation remains a complex goal, this work demonstrates a promising step toward computationally assisted historiography.
+
 
