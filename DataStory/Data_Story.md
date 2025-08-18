@@ -233,26 +233,35 @@ We configured the language model with the following parameters to balance creati
 
 ### Wiki Data
 
-- @Maren: Hier bitte einmal beschreiben was du technische grob gemacht hast. Also  wie wurden peaks oder trend identifizert und wie lautet unsere SPARQL Code.
-
-HIER SPARQL Anpassen:
+To understand changes in newspaper attitudes toward the NSDAP, historically significant events were retrieved from Wikidata and matched to peaks in monthly stance scores. Months with unusually high or low values were identified using a statistical threshold. The statistical threshold used in this analysis is 1.5 standard deviations (σ) away from the overall mean score (μ) across all newspapers and months. In practical terms: These peaks were then compared to events from the same time, helping to reveal how political developments may have shaped or influenced public opinion in the press.
 
 ```sparql linenums="1" title="Example query"
-# List of research data portals
-PREFIX fabio: <http://purl.org/spar/fabio/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd:   <http://www.wikidata.org/entity/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX n4c: <https://nfdi4culture.de/id/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-SELECT (SAMPLE(?resource) AS ?entity) (SAMPLE(?label) AS ?name)
-WHERE {
-    ?resource rdf:type nfdicore:DataPortal,
-      				fabio:Database .
-    ?resource rdfs:label ?label .
+SELECT ?eventLabel ?date WHERE {
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?event wdt:P585 ?date .
+    FILTER(
+      ?date >= "1938-01-01T00:00:00Z"^^xsd:dateTime &&
+      ?date <= "1938-12-31T23:59:59Z"^^xsd:dateTime
+    )
+    ?event wdt:P31/wdt:P279* wd:Q1656682 .
+    ?event wdt:P17 ?country .
+    FILTER(?country IN (
+      wd:Q7318, wd:Q28108, wd:Q16957,
+      wd:Q1198,  wd:Q183,   wd:Q1206012
+    ))
+    OPTIONAL {
+      ?event rdfs:label ?eventLabel .
+      FILTER(LANG(?eventLabel) IN ("de","en"))
+    }
+  }
 }
-GROUP BY ?resource
-ORDER BY ?name
+ORDER BY ?date
+LIMIT 500
 ```
 
 
@@ -321,9 +330,7 @@ In the case of the Hamburger Abendblatt, the data reveals a more supportive stan
   </figcaption>
 </figure>
 
-- @Maren: Hier bitte kurz deine Peaks und die dazu identifizierien Historischen Events aufzeigen
-- Observed a change in reporting after historical events or during them (!Descriptive non-judgmental!)
-
+To contextualize the monthly peaks, the graph was enriched with events from WikiData. For each peak, a long list of historical events from the corresponding month was automatically retrieved, from which relevant events were manually selected.
 
 # Challenges in OCR
 
