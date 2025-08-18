@@ -283,7 +283,7 @@ In total, all 25,234 articles were evaluated by the LLM (Mistral-Small-3.2-24B-I
 
 The results show clear differences between the publications:
 
-- he Hamburger Tageblatt had the highest share of supportive articles, with approximately 19% scoring above zero, while only about 1% were critical.
+- The Hamburger Tageblatt had the highest share of supportive articles, with approximately 19% scoring above zero, while only about 1% were critical.
 
 - The Schwäbischer Merkur showed a largely neutral tone, with over 93% of its articles scored as zero. A small proportion (~6%) were supportive, and less than 1% critical.
 
@@ -387,3 +387,4 @@ Additionally, the difficulty in assessing the quality and accuracy of LLM-genera
 Nevertheless, the approach has shown that LLMs can be valuable tools in historical media analysis, especially for scaling initial explorations across large datasets. It can enable historians, researchers, and the public to surface trends, identify anomalies, and formulate more focused research questions. Future extensions might include more sophisticated OCR error correction, model fine-tuning on historical German language, and closer integration of event data to improve interpretability.
 
 In short, while fully automated historical interpretation remains a complex goal, this work demonstrates a promising step toward computationally assisted historiography.
+
