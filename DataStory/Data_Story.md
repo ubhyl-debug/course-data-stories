@@ -5,16 +5,54 @@ In recent years, the role of journalism in shaping public opinion, particularly 
 
 # Introduction/Motivation
 
-The [Deutsche Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper) is run by the German Digital Library and enables free access to numerous historical newspapers from German cultural and scientific institutions. It contains over 1,931 newspapers comprising more than 25 million pages, especially many from the beginning of the 20th century.
+On the night February 27, 1933, the Reichstag burned, and Germany was in the midst of election campaigns for the upcoming vote in early March. Police and fire department officials identified the cause of the fire as arson, and the search for culprits began. The Reichspolizei arrested a young Dutch bricklayer (Marinus van der Lubbe), who confessed during interrogation, while one of the most influential parties at that time (the NSDAP) suspected a communist conspiracy. On February 28, President Hindenburg, at Hitler’s urging, issued the Reichstag Fire Decree, which suspended civil liberties and laid the groundwork for mass arrests and repressive measures primarily against communists and their organizations. These included the arrest of Reichstag member Ernst Torgler of the Kommunistische Partei Deutschlands (KPD). Torgler surrendered himself to the police, against the will of the KPD party leadership.
+
+The reporting in newspapers of that time on the arrest of Torgler differed significantly. NSDAP-aligned newspapers, such as the Hamburger Tageblatt, presented Ernst Torgler as a key suspect in the Reichstag fire, citing alleged eyewitness testimonies and framing his arrest as proof of communist involvement. By casting the communists as an immediate threat, the NSDAP sought to boost its own popularity and rally public support behind its policies. In contrast, newspapers closely connected to left-leaning parties, such as the Sozialdemokrat, focused more on the repression of communists and their organizations. Furthermore, the Sozialdemokrat criticized the involvement of the NSDAP organizations SA and SS within the Reichspolizei. From these differing reports, it is possible to derive an impression of a newspaper’s stance toward the NSDAP.
+
+<figure>
+  <p><a href="https://www.deutsche-digitale-bibliothek.de">
+    <img alt="Logo des Deutschen Zeitungsportals" src="HamburgerTagblatt_Sozialdemokrat.png">
+  </a></p>
+  <figcaption>
+    <p>Excerpt from the newspapers Hamburger Tagblatt and Sozialdemokrat (01. March 1933)
+  </figcaption>
+</figure>
+
+
+
+
+<div style="display: flex; gap: 10px;">
+  <div style="flex: 1; background-color: #002D4C; color: white; padding: 10px; border: 1px solid #002D4C; border-radius: 4px;">
+    <strong>Excerpt from the Hamburger Tagblatt newspaper:</strong> <br> 
+    „Die Untersuchung hat weiter ergeben, daß drei Augenzeugen einige Stunden vor Ausbruch des Brandes den verhafteten holländischen Täter in Begleitung der kommunistischen Abgeordneten Torgler und Koenen in den Gängen des Reichstages gesehen haben.
+    Ein Irrtum der Augenzeugen ist bei dem Aussehen des Brandstifters unmöglich. Da weiterhin der Abgeordneten-Eingang des Reichstages um 8 Uhr abends geschlossen wird, die kommunistischen Abgeordneten Torgler und Koenen sich jedoch gegen 8.30 Uhr ihre Garderobe in ihre Zimmer bringen ließen und erst gegen 10 Uhr durch ein anderes Portal den Reichstag verließen, besteht gegen diese beiden Kommunisten dringender Tatverdacht. In dieser Zeit ist nämlich der Brand angelegt worden.“ <br>
+    <a href="https://www.deutsche-digitale-bibliothek.de/newspaper/item/Y353SVCH47W4O2ARVT2OCCFV3RPVCFRL?issuepage=3" >
+      link Hamburger Tagblatt
+    </a>
+  </div>
+
+  <div style="flex: 1; background-color: #002D4C; color: white; padding: 10px; border: 1px solid #002D4C; border-radius: 4px;">
+    <strong>Excerpt from the Sozialdemokrat newspaper:</strong> <br>
+    "Damit ist die Einreihung der SA- und SS-Banden, die ungezählte Morde und Terrorakte auf dem Gewissen haben, in den amtlichen Polizeiapparat mundgerecht gemacht. Und nun kommt der Hauptschlag gegen die marxistische Linke: Gegen führende kommunistische Reichstagsabgeordnete wurde wegen angeblichen Tatverdachts Haftbefehl erlassen, die übrigen Abgeordneten und Funktionäre der Partei wurden in Schutzhast genommen. Das ‚rechtfertigt‘ selbstverständlich die ungeheuerlichste Knebelung der Pressefreiheit, denn sämtliche kommunistischen Zeitungen, Zeitschriften, Flugblätter und Plakate sind verboten. Zudem trifft die Notverordnung ‚zum Schutz von Volk und Staat‘, die praktisch dem Standrecht gleichkommt, die gesamte Arbeiterbewegung, indem sie mit Terror, Verboten und Todesstrafe jeden Widerstand ersticken soll." <br>
+    <a href="https://www.deutsche-digitale-bibliothek.de/newspaper/item/YGFEXVVB2W6EJGDT4ZJUOJRJL6VDRPZ4?issuepage=1" >
+      link Sozialdemokrat
+    </a>
+  </div>
+</div>
+
+<br>
+
+To derive the stance of newspapers from that time, a sufficiently large dataset is required. Such data is available through the [Deutsche Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper) a service of the German Digital Library that provides free access to historical newspapers collected from German cultural and scientific institutions. The portal currently hosts more than 1,931 newspaper titles comprising over 25 million pages, with particularly rich coverage of the early 20th century. 
 
 <figure>
   <p><a href="https://www.deutsche-digitale-bibliothek.de/assets/dzp-logo-lg-rgb-ef2b5467392b95453fad9602155430d8.svg">
     <img alt="Logo des Deutschen Zeitungsportals" src="Deutsche_Zeitungsportal_logo.svg">
   </a></p>
   <figcaption>
-    <p>Logo des Deutschen Zeitungsportals
+    <p>Logo of the Deutschen Zeitungsportals
   </figcaption>
 </figure>
+
 
 This rich data source allows for multiple potential analyses, providing, for example, deeper insights into the general public portrayal of political events. However, utilizing such large amounts of data involves an an overwhelming amount of manual effort if done by humans. This is where Large Language Models come in handy. These models are capable of understanding textual context and thus can be utilized to assist in analyzing large numbers of news articles.
 
@@ -23,19 +61,11 @@ The data story focuses on analyzing how historical newspapers positioned themsel
 
 # Research questions
 
+The Data Story research questions are separated into three different questions:
 
-The Research question are seperated in two diffrent blocks:
-
-**Noise**
-
-1. How can noise/errors in the OCR text be defined and measured?
-2. How can noise/errors in the OCR text be handled and mitigated?
-
-**Scoring**
-
-1. What are the relevant articles to determine what stance a newspaper had toward the NS regime?
-2. What are the criteria to define what stance an article had toward the NS regime?
-3. How can the stance toward the NS regime be quantified?
+1. How can the stance of historical newspapers towards the NSDAP be measured?
+2. How did the stance change over time and in comparison to other newspapers?
+3. Which historical events can be linked to trends and changes in stance?
 
 
 
@@ -50,7 +80,7 @@ Currently, there is no SPARQL endpoint in the NFDI4Culture environment for data 
 
 <figure>
   <p><a>
-    <img alt="Overview of data flow" src="overview.svg">
+    <img alt="Overview of data flow" src="overview.svg" style="width:50%;">
   </a></p>
   <figcaption>
     <p>Overview of data flow
@@ -72,107 +102,107 @@ Applying these criteria resulted in a selection of 101 newspapers, representing 
 
 <br>
 
-1. Sauerländisches Volksblatt : aeltester Anzeiger des Sauerlandes : ueber 100 Jahre Heimat- und Kreisblatt im Kreise Olpe : Tageszeitung für Politik, Unterhaltung und Belehrung
-2. Riesaer Tageblatt und Anzeiger : (Elbeblatt und Anzeiger) : amtliche Bekanntmachungen für die Stadt und den Landkreis Riesa
-3. Frankenberger Tageblatt, Bezirks-Anzeiger : Amtsblatt für die königliche Amtshauptmannschaft Flöha, das königliche Amtsgericht und den Stadtrat zu Frankenberg i. Sa
-4. Der Grafschafter. 1914-1945
-5. Schwäbischer Merkur : mit Schwäbischer Kronik und Handelszeitung : Süddeutsche Zeitung
-6. Wittener Tageblatt : verbunden mit der Annener Zeitung
-7. Velberter Zeitung : Nevigeser Volkszeitung : Heiligenhauser Zeitung
-8. Rheinisches Volksblatt : Hildener Zeitung und Tageblatt : Hildener Rundschau
-9. Gießener Anzeiger : General-Anzeiger für Oberhessen
-10. Mitteldeutsche Nationalzeitung
-11. Oberkasseler Zeitung : Heimatzeitung für Oberkassel, Ober- und Niederdollendorf und Römlinghoven
-12. Wittener Volks-Zeitung : verbunden mit dem "Wittener Lokal-Anzeiger"
-13. Hallische Nachrichten : General-Anzeiger für Halle und die Provinz Sachsen
-14. Aachener Anzeiger : politisches Tageblatt : beliebtes und wirksames Anzeigenblatt der Stadt und der Regierungsbezirks
-15. Durlacher Tagblatt : Heimatblatt für die Stadt und den früheren Amtsbezirk Durlach; Pfinztäler Bote für Grötzingen, Berghausen, Söllingen, Wöschbach u. Kleinsteinbach
-16. Stadtanzeiger für Castrop-Rauxel und Umgebung : Castroper Zeitung, Rauxeler Neueste Nachrichten, Bladenhorster Tageblatt : amtliches Veröffentlichungsblatt für den Landgerichtsbezirk Dortmund, allgemeindes Kreisblatt für den Stadtkreis Castrop-Rauxel
-17. Schwerter Zeitung : Heimatblatt für die Stadt Schwerte und die Ämter Westhofen und Ergste : einzige in Schwerte gedruckte Zeitung
-18. Dresdner Nachrichten
-19. Hamburger Fremdenblatt, Abendausgabe
-20. Sächsische Volkszeitung : für christliche Politik und Kultur
-21. Eibenstocker Tageblatt : Anzeiger für den Amtsgerichtsbezirk Eibenstock und dessen Umgebung, umfassend die Ortschaften Eibenstock, Blauenthal, Carlsfeld, Hundshübel, Neuheide, Oberstützengrün, Schönheide, Schönheiderhammer, Sosa, Unterstützengrün, Wildenthal, Wilzschhaus, Wolfsgrün usw
-22. Wilhelmsburger Zeitung : das Echo der Elbinsel : die Stimme deiner Heimat
-23. Der Erft-Bote. 1890-1950
-24. Westfälische Zeitung : Bielefelder Tageblatt
-25. Kölnische Zeitung. 1803-1945
-26. Rhein- und Ruhrzeitung : Tageszeitung für das niederrheinische Industriegebiet und den linken Niederrhein : das Blatt der westdeutschen Binnenschiffahrt
-27. Deutscher Reichsanzeiger und Preußischer Staatsanzeiger
-28. Erzgebirgischer Volksfreund : mit Schwarzenberger Tageblatt
-29. Rheinisch-Bergische Zeitung : Heidersche Zeitung ; ältestes Blatt des Rheinisch-Bergischen Kreises
-30. Bergische Post. 1924-1941
-31. Honnefer Volkszeitung. 1889-1978
-32. Sächsische Elbzeitung : Tageblatt für die Sächsische Schweiz
-33. Börsenblatt für den deutschen Buchhandel : bbb ; Fachzeitschr. für Verlagswesen u. Buchhandel
-34. Hamburger Tageblatt : Zeitung der Nationalsozialistischen Deutschen Arbeiterpartei
-35. Solinger Tageblatt : die Nachmittagszeitung der Klingenstadt : aelteste Tageszeitung im Stadtkreis Solingen
-36. Annener Zeitung : verbunden mit der Annener Volkszeitung : Anzeigenblatt für Witten-Annen und die Stadtteile Rüdinghausen, Stockum und Düren
-37. Ohligser Anzeiger : Ohligser Zeitung und Tageblatt ; einzige in Ohligs erscheinende Tageszeitung
-38. Bergische Wacht. 1907-1941
-39. Schwäbischer Merkur ; [...] ; Wochenausgabe für das Ausland
-40. Der sächsische Erzähler : Bischofswerdaer Tageblatt ; (Tageblatt für Bischofswerda, Neukirch und Umgebung)
-41. Echo des Siebengebirges. 1873-1941
-42. General-Anzeiger. 1889-1945
-43. Stuttgarter neues Tagblatt : südwestdeutsche Handels- und Wirtschafts-Zeitung
-44. Haaner Zeitung. 1928-1941
-45. Bergische Landes-Zeitung. 1931-1945
-46. Dresdner neueste Nachrichten
-47. Marbacher Zeitung : Bottwartal-Bote
-48. Zwönitztaler Anzeiger
-49. Der Bote vom Geising und Müglitztal-Zeitung : Bezirksanzeiger für Altenberg, Geising, Lauenstein, Bärenstein und die umliegenden Ortschaften
-50. Harburger Anzeigen und Nachrichten
-51. Neckar-Bote : Heimatzeitung für Seckenheim und Umgebung
-52. Bergheimer Zeitung. 1905-1943
-53. Internationale Literatur
-54. Dresdner Nachrichten, 01-Frühausgabe
-55. Merseburger Korrespondent : mitteldeutsche neueste Nachrichten
-56. Godesberger Volkszeitung. 1913-1933
-57. Niederrheinisches Tageblatt : Kempener Volkszeitung : Kempener Zeitung : Lobbericher Tageblatt : Heimatzeitung für den linken Niederrhein
-58. Dortmunder Zeitung. 1874-1939
-59. Sächsische Staatszeitung : Staatsanzeiger für den Freistaat Sachsen
-60. Bergische Zeitung. 1922-1935
-61. Sächsische Dorfzeitung und Elbgaupresse : mit Loschwitzer Anzeiger ; Tageszeitung für das östliche Dresden u. seine Vororte
-62. Viernheimer Anzeiger : Viernheimer Zeitung : Viernheimer Tageblatt : Viernheimer Nachrichten : Viernheimer Bürger-Ztg. : Viernh. Volksblatt
-63. Central-Volksblatt für das gesamte Sauerland : Arnsberger Zeitung : Sauerländer Bote
-64. Duisburger General-Anzeiger. 1914-1935
-65. Wochenblatt für Zschopau und Umgegend : Zschopauer Tageblatt u. Anzeiger
-66. Riedlinger Zeitung : Tag- und Anzeigeblatt für den Bezirk Riedlingen
-67. Echo der Gegenwart. 1848-1935
-68. Vorwärts
-69. Langenberger Zeitung. 1888-1935
-70. Dresdner Nachrichten, 02-Abendausgabe
-71. Westfälische neueste Nachrichten mit Bielefelder General-Anzeiger und Handelsblatt
-72. Anzeiger vom Oberland : Tageszeitung für das Oberamt Biberach und die Stadtgemeinde Biberach
-73. Bottwartal-Bote : Amtsblatt für die Stadt Grossbottwar : Beilsteiner Zeitung, Mundelsheimer Nachrichten, Oberstenfelder Anzeiger
-74. Weißeritz-Zeitung : Tageszeitung und Anzeiger für Dippoldiswalde, Schmiedeberg u. U.
-75. Sozialdemokrat
-76. Der Landbote : Anzeiger für den Amtsbezirk Sinsheim und Umgebung
-77. Laupheimer Verkündiger : verbunden mit dem Laupheimer Volksblatt
-78. Karlsruher Zeitung
-79. Hamburger Volkszeitung : kommunistische Tageszeitung für Hamburg und Umgebung
-80. Verbo Schussen-Bote : Oberschw. Morgenblatt
-81. Deutsche Reichs-Zeitung. 1871-1934
-82. Saale-Zeitung : allgemeine Zeitung für Mitteldeutschland ; Hallesche neueste Nachrichten
-83. Der Rottumbote: amtliches und private Anzeigeblatt für Ochsenhausen und Umgebung
-84. Hörder Volksblatt. 1884-1934
-85. Süddeutsche Zeitung : für deutsche Politik und Volkswirtschaft
-86. Die Glocke. 1885-1933
-87. Merseburger Tageblatt : Kreisblatt ; mit den amtlichen Bekanntmachungen des Stadt- und Landkreises Merseburg
-88. Aufwärts : christliches Tageblatt
-89. Iserlohner Kreisanzeiger und Zeitung. 1898-1949
-90. Volkswacht : Organ der Sozialdemokratie für das östl. Westfalen und die lippischen Freistaaten
-91. Nachrichten für Naunhof und Umgegend : (Albrechtshain, Ammelshain, Beucha, Borsdorf, Eicha, Erdmannshain, Fuchshain, Groß- und Kleinsteinberg, Klinga, Köhra, Lindhardt, Pomßen, Staudnitz, Threna usw.)
-92. Bergedorfer Zeitung : unabhängig, überparteilich ; mit amtl. Bekanntmachungen
-93. Westdeutsche Landeszeitung : Gladbacher Volkszeitung und Handelsblatt : allgemeiner Anzeiger für den gesamten Niederrhein : die Niederrheinische Heimatzeitung
-94. Dorstener Volkszeitung. 1919-1933
-95. Rheinisches Volksblatt
-96. Hildener Rundschau. 1924-1936
-97. Bürener Zeitung. 1896-1935
-98. Karlsruher Tagblatt
-99. Münsterischer Anzeiger : Westfälischer Merkur : Münsterische Volkszeitung : amtliches Organ des Gaues Westfalen-Nord der NSDAP und sämtlicher Behörden
-100. Buchauer Zeitung Volksblatt vom Federsee : Amtsblatt für die städt. Behörden Buchaus
-101. Bünder Tageblatt. 1901-1942
+1. Sauerländisches Volksblatt : aeltester Anzeiger des Sauerlandes : ueber 100 Jahre Heimat- und Kreisblatt im Kreise Olpe : Tageszeitung für Politik, Unterhaltung und Belehrung <br>
+2. Riesaer Tageblatt und Anzeiger : (Elbeblatt und Anzeiger) : amtliche Bekanntmachungen für die Stadt und den Landkreis Riesa <br>
+3. Frankenberger Tageblatt, Bezirks-Anzeiger : Amtsblatt für die königliche Amtshauptmannschaft Flöha, das königliche Amtsgericht und den Stadtrat zu Frankenberg i. Sa <br>
+4. Der Grafschafter. 1914-1945 <br>
+5. Schwäbischer Merkur : mit Schwäbischer Kronik und Handelszeitung : Süddeutsche Zeitung <br>
+6. Wittener Tageblatt : verbunden mit der Annener Zeitung <br>
+7. Velberter Zeitung : Nevigeser Volkszeitung : Heiligenhauser Zeitung <br>
+8. Rheinisches Volksblatt : Hildener Zeitung und Tageblatt : Hildener Rundschau <br>
+9. Gießener Anzeiger : General-Anzeiger für Oberhessen <br>
+10. Mitteldeutsche Nationalzeitung <br>
+11. Oberkasseler Zeitung : Heimatzeitung für Oberkassel, Ober- und Niederdollendorf und Römlinghoven <br>
+12. Wittener Volks-Zeitung : verbunden mit dem "Wittener Lokal-Anzeiger" <br>
+13. Hallische Nachrichten : General-Anzeiger für Halle und die Provinz Sachsen <br>
+14. Aachener Anzeiger : politisches Tageblatt : beliebtes und wirksames Anzeigenblatt der Stadt und der Regierungsbezirks <br>
+15. Durlacher Tagblatt : Heimatblatt für die Stadt und den früheren Amtsbezirk Durlach; Pfinztäler Bote für Grötzingen, Berghausen, Söllingen, Wöschbach u. Kleinsteinbach <br>
+16. Stadtanzeiger für Castrop-Rauxel und Umgebung : Castroper Zeitung, Rauxeler Neueste Nachrichten, Bladenhorster Tageblatt : amtliches Veröffentlichungsblatt für den Landgerichtsbezirk Dortmund, allgemeindes Kreisblatt für den Stadtkreis Castrop-Rauxel <br>
+17. Schwerter Zeitung : Heimatblatt für die Stadt Schwerte und die Ämter Westhofen und Ergste : einzige in Schwerte gedruckte Zeitung <br>
+18. Dresdner Nachrichten <br>
+19. Hamburger Fremdenblatt, Abendausgabe <br>
+20. Sächsische Volkszeitung : für christliche Politik und Kultur <br>
+21. Eibenstocker Tageblatt : Anzeiger für den Amtsgerichtsbezirk Eibenstock und dessen Umgebung, umfassend die Ortschaften Eibenstock, Blauenthal, Carlsfeld, Hundshübel, Neuheide, Oberstützengrün, Schönheide, Schönheiderhammer, Sosa, Unterstützengrün, Wildenthal, Wilzschhaus, Wolfsgrün usw <br>
+22. Wilhelmsburger Zeitung : das Echo der Elbinsel : die Stimme deiner Heimat <br>
+23. Der Erft-Bote. 1890-1950 <br>
+24. Westfälische Zeitung : Bielefelder Tageblatt <br>
+25. Kölnische Zeitung. 1803-1945 <br>
+26. Rhein- und Ruhrzeitung : Tageszeitung für das niederrheinische Industriegebiet und den linken Niederrhein : das Blatt der westdeutschen Binnenschiffahrt <br>
+27. Deutscher Reichsanzeiger und Preußischer Staatsanzeiger <br>
+28. Erzgebirgischer Volksfreund : mit Schwarzenberger Tageblatt <br>
+29. Rheinisch-Bergische Zeitung : Heidersche Zeitung ; ältestes Blatt des Rheinisch-Bergischen Kreises <br>
+30. Bergische Post. 1924-1941 <br>
+31. Honnefer Volkszeitung. 1889-1978 <br>
+32. Sächsische Elbzeitung : Tageblatt für die Sächsische Schweiz <br>
+33. Börsenblatt für den deutschen Buchhandel : bbb ; Fachzeitschr. für Verlagswesen u. Buchhandel <br>
+34. Hamburger Tageblatt : Zeitung der Nationalsozialistischen Deutschen Arbeiterpartei <br>
+35. Solinger Tageblatt : die Nachmittagszeitung der Klingenstadt : aelteste Tageszeitung im Stadtkreis Solingen <br>
+36. Annener Zeitung : verbunden mit der Annener Volkszeitung : Anzeigenblatt für Witten-Annen und die Stadtteile Rüdinghausen, Stockum und Düren <br>
+37. Ohligser Anzeiger : Ohligser Zeitung und Tageblatt ; einzige in Ohligs erscheinende Tageszeitung <br>
+38. Bergische Wacht. 1907-1941 <br>
+39. Schwäbischer Merkur ; [...] ; Wochenausgabe für das Ausland <br>
+40. Der sächsische Erzähler : Bischofswerdaer Tageblatt ; (Tageblatt für Bischofswerda, Neukirch und Umgebung) <br>
+41. Echo des Siebengebirges. 1873-1941 <br>
+42. General-Anzeiger. 1889-1945 <br>
+43. Stuttgarter neues Tagblatt : südwestdeutsche Handels- und Wirtschafts-Zeitung <br>
+44. Haaner Zeitung. 1928-1941 <br>
+45. Bergische Landes-Zeitung. 1931-1945 <br>
+46. Dresdner neueste Nachrichten <br>
+47. Marbacher Zeitung : Bottwartal-Bote <br>
+48. Zwönitztaler Anzeiger <br>
+49. Der Bote vom Geising und Müglitztal-Zeitung : Bezirksanzeiger für Altenberg, Geising, Lauenstein, Bärenstein und die umliegenden Ortschaften <br>
+50. Harburger Anzeigen und Nachrichten <br>
+51. Neckar-Bote : Heimatzeitung für Seckenheim und Umgebung <br>
+52. Bergheimer Zeitung. 1905-1943 <br>
+53. Internationale Literatur <br>
+54. Dresdner Nachrichten, 01-Frühausgabe <br>
+55. Merseburger Korrespondent : mitteldeutsche neueste Nachrichten <br>
+56. Godesberger Volkszeitung. 1913-1933 <br>
+57. Niederrheinisches Tageblatt : Kempener Volkszeitung : Kempener Zeitung : Lobbericher Tageblatt : Heimatzeitung für den linken Niederrhein <br>
+58. Dortmunder Zeitung. 1874-1939 <br>
+59. Sächsische Staatszeitung : Staatsanzeiger für den Freistaat Sachsen <br>
+60. Bergische Zeitung. 1922-1935 <br>
+61. Sächsische Dorfzeitung und Elbgaupresse : mit Loschwitzer Anzeiger ; Tageszeitung für das östliche Dresden u. seine Vororte <br>
+62. Viernheimer Anzeiger : Viernheimer Zeitung : Viernheimer Tageblatt : Viernheimer Nachrichten : Viernheimer Bürger-Ztg. : Viernh. Volksblatt <br>
+63. Central-Volksblatt für das gesamte Sauerland : Arnsberger Zeitung : Sauerländer Bote <br>
+64. Duisburger General-Anzeiger. 1914-1935 <br>
+65. Wochenblatt für Zschopau und Umgegend : Zschopauer Tageblatt u. Anzeiger <br>
+66. Riedlinger Zeitung : Tag- und Anzeigeblatt für den Bezirk Riedlingen <br>
+67. Echo der Gegenwart. 1848-1935 <br>
+68. Vorwärts <br>
+69. Langenberger Zeitung. 1888-1935 <br>
+70. Dresdner Nachrichten, 02-Abendausgabe <br>
+71. Westfälische neueste Nachrichten mit Bielefelder General-Anzeiger und Handelsblatt <br>
+72. Anzeiger vom Oberland : Tageszeitung für das Oberamt Biberach und die Stadtgemeinde Biberach <br>
+73. Bottwartal-Bote : Amtsblatt für die Stadt Grossbottwar : Beilsteiner Zeitung, Mundelsheimer Nachrichten, Oberstenfelder Anzeiger <br>
+74. Weißeritz-Zeitung : Tageszeitung und Anzeiger für Dippoldiswalde, Schmiedeberg u. U. <br>
+75. Sozialdemokrat <br>
+76. Der Landbote : Anzeiger für den Amtsbezirk Sinsheim und Umgebung <br>
+77. Laupheimer Verkündiger : verbunden mit dem Laupheimer Volksblatt <br>
+78. Karlsruher Zeitung <br>
+79. Hamburger Volkszeitung : kommunistische Tageszeitung für Hamburg und Umgebung <br>
+80. Verbo Schussen-Bote : Oberschw. Morgenblatt <br>
+81. Deutsche Reichs-Zeitung. 1871-1934 <br>
+82. Saale-Zeitung : allgemeine Zeitung für Mitteldeutschland ; Hallesche neueste Nachrichten <br>
+83. Der Rottumbote: amtliches und private Anzeigeblatt für Ochsenhausen und Umgebung <br>
+84. Hörder Volksblatt. 1884-1934 <br>
+85. Süddeutsche Zeitung : für deutsche Politik und Volkswirtschaft <br>
+86. Die Glocke. 1885-1933 <br>
+87. Merseburger Tageblatt : Kreisblatt ; mit den amtlichen Bekanntmachungen des Stadt- und Landkreises Merseburg <br>
+88. Aufwärts : christliches Tageblatt <br>
+89. Iserlohner Kreisanzeiger und Zeitung. 1898-1949 <br>
+90. Volkswacht : Organ der Sozialdemokratie für das östl. Westfalen und die lippischen Freistaaten <br>
+91. Nachrichten für Naunhof und Umgegend : (Albrechtshain, Ammelshain, Beucha, Borsdorf, Eicha, Erdmannshain, Fuchshain, Groß- und Kleinsteinberg, Klinga, Köhra, Lindhardt, Pomßen, Staudnitz, Threna usw.) <br>
+92. Bergedorfer Zeitung : unabhängig, überparteilich ; mit amtl. Bekanntmachungen <br>
+93. Westdeutsche Landeszeitung : Gladbacher Volkszeitung und Handelsblatt : allgemeiner Anzeiger für den gesamten Niederrhein : die Niederrheinische Heimatzeitung <br>
+94. Dorstener Volkszeitung. 1919-1933 <br>
+95. Rheinisches Volksblatt <br>
+96. Hildener Rundschau. 1924-1936 <br>
+97. Bürener Zeitung. 1896-1935 <br>
+98. Karlsruher Tagblatt <br>
+99. Münsterischer Anzeiger : Westfälischer Merkur : Münsterische Volkszeitung : amtliches Organ des Gaues Westfalen-Nord der NSDAP und sämtlicher Behörden <br>
+100. Buchauer Zeitung Volksblatt vom Federsee : Amtsblatt für die städt. Behörden Buchaus <br>
+101. Bünder Tageblatt. 1901-1942 <br>
 </details>
 
 <p></p>
@@ -233,7 +263,7 @@ We configured the language model with the following parameters to balance creati
 
 ### Wiki Data
 
-To understand changes in newspaper attitudes toward the NSDAP, historically significant events were retrieved from Wikidata and matched to peaks in monthly stance scores. Months with unusually high or low values were identified using a statistical threshold. The statistical threshold used in this analysis is 1.5 standard deviations (σ) away from the overall mean score (μ) across all newspapers and months. In practical terms: These peaks were then compared to events from the same time, helping to reveal how political developments may have shaped or influenced public opinion in the press.
+To understand changes in newspaper attitudes toward the NSDAP, historically significant events were retrieved from Wikidata via the NFDI4Culture SPARQL endpoint and matched to peaks in monthly stance scores. Months with unusually high or low values were identified using a statistical threshold of 1.5 standard deviations (σ) from the overall mean score (μ) across all newspapers and months. In practical terms, these peaks were then compared with events from the same period, helping to reveal how political developments may have shaped or influenced public opinion in the press.
 
 ```sparql linenums="1" title="Example query"
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -264,15 +294,56 @@ ORDER BY ?date
 LIMIT 500
 ```
 
+### Challenges in OCR
 
+In the course of our analysis, we identified quality issues in the OCR (Optical Character Recognition) texts provided by the [Deutsche Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper). OCR (Optical Character Recognition) is a process that converts handwritten or printed text from images into machine-readable text. It is widely used and enables, for example, historians to scan pages of old historical books to extract their text.
 
+![alt text](OCR_exsample.svg)
 
+[link](https://www.deutsche-digitale-bibliothek.de/newspaper/item/PC26FTJGOJSB5WRMM4MZTEFKGOCRY4VW?query=Der%20Motor&issuepage=1)
+
+The example above demonstrates that printed fonts based on the modern Latin alphabet tend to yield relatively accurate OCR results. In contrast, when processing texts in German Fraktur, recognition errors occur more frequently due to the script's divergence from the Latin alphabet.
+
+![alt text](OCR_Text_Fraktur.svg)
+
+[link](https://www.deutsche-digitale-bibliothek.de/newspaper/item/OBFCRDFM4NLVYKD6MDK2IQCIA7SHSBQ6?issuepage=1)
+
+As shown in the image above, the OCR-recognized text from the [Deutsche Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper) fails to accurately recognize certain letters. For example, it transforms the original title "Diplomatenempfänge beim Führer" into "Tiptomniedempfunge deim Zahrer." The table below summarizes the character recognition errors made by the OCR program, indicating the incorrect characters and their correct counterparts.
+
+ 
+| OCR Character | Correct Character | Example Error                  |
+|---------------|-------------------|--------------------------------|
+| T             | D                 | Tiptomniedempfunge → Diplomatenempfänge |
+| i             | l                 | Tiptomniedempfunge → Diplomatenempfänge |
+| p             | l                 | Tiptomniedempfunge → Diplomatenempfänge |
+| t             | m                 | Tiptomniedempfunge → Diplomatenempfänge |
+| n             | a                 | nied → aten                    |
+| e             | a                 | empfunge → empfänge            |
+| u             | ä                 | empfunge → empfänge            |
+| g             | r                 | empfunge → empfänge            |
+| d             | b                 | deim → beim                    |
+| Z             | F                 | Zahrer → Führer                |
+| a             | ü                 | Zahrer → Führer                |
+
+The recognition errors make it difficult to understand the titles obtained from OCR output without access to the original text or its context. This poses a particular challenge for the application of natural language processing (NLP) methods, as incoherent words can significantly impair textual analysis-especially when dealing with linguistically complex or historically nuanced documents.
+
+We explored a method for detecting and correcting OCR errors using a dictionary-based approach. When an unrecognized word was found, the surrounding sentence was sent to a LLM, which returned a corrected version of the word. Both the erroneous and corrected words were stored so that repeated errors could be resolved without querying the LLM again, which helped reduce overall API usage.
+
+<div style="background-color: #009682; padding: 10px; border: 1px solid #009682; border-radius: 4px;">
+<strong>Prompt:</strong> <br>
+Correct the misrecognized word '{word}' in the German sentence: '{s}'.
+Only return the replacement word. 
+</div>
+
+Ultimately, this approach was not continued due to the increasing effort and cost of LLM API requests. At the same time, new OCR tools such [Mistral OCR](https://mistral.ai/news/mistral-ocr) were introduced, showing promising improvements in handling historical German scripts like Fraktur, especially when fine-tuned for the task. 
+
+In the further course of this data story, the original OCR texts of the articles from the [Deutsche Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper) will be used. As shown in the example above, the quality of OCR texts can vary greatly, so the results will also provide information about how well LLMs can interpret the stance towards the NSDAP using the original OCR texts.
 
 # Comparing Data
 
 In total, all 25,234 articles were evaluated by the LLM (Mistral-Small-3.2-24B-Instruct-2506). In 67 cases, the LLM did not only respond with a final score as requested in the prompt, but also with a full-text explanation. We filtered these cases out by only considering responses with five or fewer characters. The remaining 25,164 articles can be divided into the following responses:
 
-| Score                          | Schwäbischer Merkur : mit Schwäbischer Kronik und Handelszeitung : Süddeutsche Zeitung | Hamburger Tageblatt : Zeitung der Nationalsozialistischen Deutschen Arbeiterpartei | Vorwärts | Total  |
+| Score                          | Schwäbischer Merkur<sup>1</sup> | Hamburger Tageblatt<sup>2</sup> | Vorwärts | Total  |
 |-------------------------------|------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|----------|--------|
 | >0                            | 665                                                                                      | 1547                                                                                 | 80       | 2292   |
 | 0                             | 10289                                                                                    | 6392                                                                                 | 5501     | 22182  |
@@ -280,18 +351,23 @@ In total, all 25,234 articles were evaluated by the LLM (Mistral-Small-3.2-24B-I
 | **Articles with Scores**                     | 11032                                                                                    | 8031                                                                                 | 6101     | 25164  |
 | Answers longer than 5 characters   | 18                                                                                       | 48                                                                                   | 1        | 67     |
 
+<p style="font-size:smaller">
+Footnote:
+1: Schwäbischer Merkur : mit Schwäbischer Kronik und Handelszeitung : Süddeutsche Zeitung 
+2: Hamburger Tageblatt: Zeitung der Nationalsozialistischen Deutschen Arbeiterpartei
+</p>
 
-The results show clear differences between the publications:
+The results show clear differences between the publications over the entire observation period:
 
 - The Hamburger Tageblatt had the highest share of supportive articles, with approximately 19% scoring above zero, while only about 1% were critical.
 
-- The Schwäbischer Merkur showed a largely neutral tone, with over 93% of its articles scored as zero. A small proportion (~6%) were supportive, and less than 1% critical.
+- The Schwäbischer Merkur exhibited a largely neutral tone, with more than 93% of its articles receiving a neutral score. A small proportion (~6%) were classified as supportive, while fewer than 1% were critical. However, it remains uncertain how many of these articles directly addressed political topics. Consequently, the high share of neutral scores may partly reflect coverage of non-political content.
 
 - Vorwärts stood out with the highest proportion of critical content, where over 8% of its articles received a score below zero. Supportive articles were rare (~1%), while 90% were classified neutral.
 
 Overall, 88% of all articles across the three newspapers were classified as neutral, indicating a general absence of explicit political stance or a challenge for the model to detect implicit bias.
 
-All articles were grouped by newspaper and averaged using the arithmetic mean on both a monthly and quarterly basis, with zero values excluded.
+All articles were grouped by newspaper and averaged using the arithmetic mean on both a monthly and quarterly basis, with zero values excluded. The third figure is an interactive plot showing the monthly average score.
 
 <figure>
   <p><a>
@@ -310,6 +386,20 @@ All articles were grouped by newspaper and averaged using the arithmetic mean on
     <p>Quarterly average score plot
   </figcaption>
 </figure>
+
+<figure>
+    <iframe width="100%" height="650" frameBorder="0" src="average_score_plot.html" ></iframe>
+  <figcaption>
+    <p>Interactive monthly average score plot
+  </figcaption>
+</figure>
+<p style="font-size:smaller">
+Interactive Plot Instructions:
+You can toggle newspapers on and off using the legend. To zoom into a time range, click and drag across the plot. To reset the view, use the Home button in the top-right corner.
+</p>
+
+
+
 
 ## Comparison Over Time and Between Newspapers
 
@@ -332,47 +422,11 @@ In the case of the Hamburger Abendblatt, the data reveals a more supportive stan
 
 To contextualize the monthly peaks, the graph was enriched with events from WikiData. For each peak, a long list of historical events from the corresponding month was automatically retrieved, from which relevant events were manually selected.
 
-# Challenges in OCR
+## Comparison with established assessments
 
-OCR (Optical Character Recognition) is a process that converts handwritten or printed text from images into machine-readable text. It is widely used and enables, for example, historians to scan pages of old historical books to extract their text.
+The above shown 
 
-![alt text](OCR_exsample.svg)
-
-[link](https://www.deutsche-digitale-bibliothek.de/newspaper/item/PC26FTJGOJSB5WRMM4MZTEFKGOCRY4VW?query=Der%20Motor&issuepage=1)
-
-The example above demonstrates that printed fonts based on the modern Latin alphabet tend to yield relatively accurate OCR results. In contrast, when processing texts in German Fraktur, recognition errors occur more frequently due to the script's divergence from the Latin alphabet.
-
-![alt text](OCR_Text_Fraktur.svg)
-
-[link](https://www.deutsche-digitale-bibliothek.de/newspaper/item/OBFCRDFM4NLVYKD6MDK2IQCIA7SHSBQ6?issuepage=1)
-
-As shown in the image above, the OCR system fails to accurately recognize certain letters. For example, it transforms the original title "Diplomatenempfänge beim Führer" into "Tiptomniedempfunge deim Zahrer." The table below summarizes the character recognition errors made by the OCR program, indicating the incorrect characters and their correct counterparts.
- 
-| OCR Character | Correct Character | Example Error                  |
-|---------------|-------------------|--------------------------------|
-| T             | D                 | Tiptomniedempfunge → Diplomatenempfänge |
-| i             | l                 | Tiptomniedempfunge → Diplomatenempfänge |
-| p             | l                 | Tiptomniedempfunge → Diplomatenempfänge |
-| t             | m                 | Tiptomniedempfunge → Diplomatenempfänge |
-| n             | a                 | nied → aten                    |
-| e             | a                 | empfunge → empfänge            |
-| u             | ä                 | empfunge → empfänge            |
-| g             | r                 | empfunge → empfänge            |
-| d             | b                 | deim → beim                    |
-| Z             | F                 | Zahrer → Führer                |
-| a             | ü                 | Zahrer → Führer                |
-
-The recognition errors make it difficult to understand the titles obtained from OCR output without access to the original text or its context. This poses a particular challenge for the application of natural language processing (NLP) methods, as incoherent words can significantly impair textual analysis-especially when dealing with linguistically complex or historically nuanced documents.
-
-In this project, we explored a method for detecting and correcting OCR errors using a dictionary-based approach. When an unrecognized word was found, the surrounding sentence was sent to a LLM, which returned a corrected version of the word. Both the erroneous and corrected words were stored so that repeated errors could be resolved without querying the LLM again, which helped reduce overall API usage.
-
-<div style="background-color: #009682; padding: 10px; border: 1px solid #009682; border-radius: 4px;">
-<strong>Prompt:</strong> <br>
-Correct the misrecognized word '{word}' in the German sentence: '{s}'.
-Only return the replacement word. 
-</div>
-
-Ultimately, this approach was not continued due to the increasing cost of LLM API requests. At the same time, new OCR tools were introduced that showed promising improvements in handling historical German scripts such as Fraktur, especially when fine-tuned for the task.
+# Challenges
 
 
 
