@@ -407,7 +407,7 @@ When examining the data over time, it becomes clear that not all newspapers repo
 
 Analyzing the trends, Vorwärts generally displayed a more oppositional stance toward the NSDAP. This opposition intensified as the party moved closer to seizing power. The Schwäbische Merkur showed scores near zero before the takeover. However, it remains unclear whether this reflects genuinely neutral reporting, a lack of explicit political positioning, or limitations in the model's ability to detect implicit bias. As such, a score around zero should not be interpreted as definitive neutrality. After the seizure of power, reporting by the Schwäbische Merkur tended to shift above zero, indicating a possible change in tone or alignment.
 
-In the case of the Hamburger Abendblatt, the data reveals a more supportive stance toward the NSDAP. This positive trend continued until the paper ceased publication in August 1944.
+In the case of the Hamburger Tageblatt, the data reveals a more supportive stance toward the NSDAP. This positive trend continued until the paper ceased publication in August 1944.
 
 ## Mapping of Historical Events
 
@@ -424,22 +424,39 @@ To contextualize the monthly peaks, the graph was enriched with events from Wiki
 
 ## Comparison with established assessments
 
-The above shown 
+When comparing the LLM-derived scores with established historians’ assessments of the newspapers, a strong correlation becomes apparent.
 
-# Challenges
+Vorwärts belonged to the German Social Democratic press and consistently opposed the rise of the National Socialist regime. This is reflected in its overall lower scores compared to the other two newspapers.
 
+The opposite pattern can be observed in the Hamburger Tageblatt. Formed in January 1931 through the merger of several National Socialist newspapers in Hamburg, it openly supported the NSDAP. This alignment is clearly mirrored in its scores, which stand in sharp contrast to Vorwärts and also to the pre–seizure-of-power data for the Schwäbischer Merkur.
+
+The Schwäbischer Merkur presents a more complex picture. Founded in 1785, it is the oldest of the three newspapers examined. With its conservative orientation in Württemberg, it was not initially part of the National Socialist press. Like many German newspapers, however, it faced increasing suppression and forced closures under the NS regime. Of the 179 daily newspapers in the Prussian administrative district of Hohenzollern in 1932, only 41 remained by late 1944. The Schwäbischer Merkur itself was discontinued in May 1941. While we could not identify academic sources explicitly confirming that the newspaper adopted a pro-NS stance after the seizure of power, the LLM scores reveal a clear upward shift beginning in 1933. This suggests an increasingly supportive tone, though still somewhat less pronounced than that of the openly pro-NS Hamburger Tageblatt.
 
 
 # Discussion and Conclusion
 
-This project demonstrates the potential of using modern Large Language Models (LLMs) to explore and interpret large volumes of historical newspaper content. By combining filtered historical data from the Deutsches Zeitungsportal with automated stance classification toward the NSDAP, we were able to identify broad patterns and temporal shifts in press positioning during one of Germany’s most politically transformative periods.
+This project set out to address three central research questions:
 
-Despite its promise, the approach also highlights several limitations that must be addressed in future work. The reliability of the OCR-based text sources is one key challenge. Text recognition errors, ranging from simple spelling mistakes to corrupted passages, can impair model understanding and lead to misclassification or neutral (zero) scores. This introduces uncertainty and calls for robust preprocessing and post-evaluation validation methods.
+RQ1: How can the stance of historical newspapers towards the NSDAP be measured?
+We demonstrated that modern LLMs can provide a scalable way of estimating stance across tens of thousands of historical articles. By framing stance as a numerical score ranging from critical (–2) to supportive (+2), we operationalized a consistent classification scheme. This approach enabled us to move beyond anecdotal case studies toward systematic, data-driven comparisons. At the same time, OCR quality issues and the lack of a ground truth remain major challenges, introducing uncertainty into the scoring. Future work should refine preprocessing and validation methods to improve robustness.
 
-Additionally, the difficulty in assessing the quality and accuracy of LLM-generated stance scores remains unresolved. Without a well-defined ground truth or a scalable way to conduct qualitative spot checks, it is hard to gauge whether the results reflect genuine historical sentiment or are artifacts of data noise and model interpretation. While the selected model offered a good balance of cost, performance, and context window, it may still struggle with subtle forms of political rhetoric, implicit bias, or historical language usage.
+RQ2: How did the stance change over time and in comparison to other newspapers?
+Our analysis revealed clear contrasts between the three selected newspapers. Vorwärts consistently opposed the NSDAP until its forced closure in early 1933, while the Hamburger Tageblatt reflected its alignment with the party through supportive scores after its founding in 1931. The Schwäbischer Merkur displayed a more complex trajectory—largely neutral before 1933 but increasingly supportive thereafter. These findings correspond closely with established historical interpretations and illustrate that LLM-based stance detection can capture temporal and cross-newspaper differences in alignment.
 
-Nevertheless, the approach has shown that LLMs can be valuable tools in historical media analysis, especially for scaling initial explorations across large datasets. It can enable historians, researchers, and the public to surface trends, identify anomalies, and formulate more focused research questions. Future extensions might include more sophisticated OCR error correction, model fine-tuning on historical German language, and closer integration of event data to improve interpretability.
+RQ3: Which historical events can be linked to trends and changes in stance?
+By aligning peaks and shifts in stance scores with events retrieved from WikiData, we identified potential correlations between press tone and historical developments. For example, the Reichstag fire and subsequent repression of opposition parties coincided with the silencing of Vorwärts and a shift in the tone of other newspapers. While such correlations do not imply causation, they provide valuable leads for historians seeking to explore how specific events shaped media narratives.
 
-In short, while fully automated historical interpretation remains a complex goal, this work demonstrates a promising step toward computationally assisted historiography.
+Overall, this project demonstrates the potential of computational methods for assisting historiographical research. LLMs are not replacements for close reading but can serve as exploratory tools that surface patterns, anomalies, and new questions across otherwise unmanageable corpora. The main limitations remain OCR noise, the difficulty of validating stance scores, and the sensitivity of models to implicit political rhetoric. Nevertheless, this study illustrates how digital methods can complement traditional scholarship in exploring the role of journalism during one of Germany’s most politically transformative periods.
 
 
+# Outlook
+
+Building on the findings of this project, several directions for future research emerge, each linked to the three guiding research questions:
+
+Improving stance measurement (RQ1): OCR quality remains a key bottleneck. Future work should integrate more advanced OCR engines, such as recently released tools optimized for Fraktur script. Additionally, fine-tuning LLMs on historical German corpora could make detection more sensitive to period-specific vocabulary and rhetoric.
+
+Broadening temporal and newspaper comparisons (RQ2): While this study focused on three newspapers, the approach can be scaled to many more titles across the Deutsches Zeitungsportal. A wider comparison could reveal regional differences and shifts in local versus national reporting. Such scaling would also allow quantitative validation against established historiographical classifications of the press.
+
+Linking stance shifts to historical events (RQ3): Our exploratory alignment of stance peaks with WikiData events highlighted promising connections, but more systematic methods are needed. Future research could integrate additional historical datasets (e.g., election results, censorship decrees, or propaganda campaigns) to test whether observed stance shifts were statistically associated with key events. Closer collaboration with historians would further ensure that computational findings are grounded in nuanced historical interpretation.
+
+Taken together, these extensions could transform LLM-based stance analysis into a robust instrument for media history research. Rather than replacing traditional scholarship, computational methods can act as a lens that helps historians navigate scale, surface new patterns, and refine questions about the interplay of press and politics in turbulent times.
