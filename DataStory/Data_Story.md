@@ -5,7 +5,7 @@ In recent years, the role of journalism in shaping public opinion, particularly 
 
 # Introduction/Motivation
 
-In Washington D. C. at Donald Trumps inauguration for his second US presidency on January 20, 2025, businessman and political figure Elon Musk made a salute, twice, that is illegal in Germany. Musk's gesture falls under the Anti-Defamation League (ADL)'s definition of a Nazi salute: raising his right arm, outstretched, palm down.
+In Washington D. C. at Donald Trumps inauguration for his second US presidency on January 20, 2025, businessman and political figure Elon Musk made a salute, twice, that is illegal in Germany. This is because Musk's gesture falls under the definition of a Nazi salute: raising the right arm, outstretched, palm down.
 
 <figure>
   <p><a href="[https://www.deutsche-digitale-bibliothek.de](https://www.theguardian.com/technology/2025/jan/20/trump-elon-musk-salute)">
@@ -15,6 +15,10 @@ In Washington D. C. at Donald Trumps inauguration for his second US presidency o
     <p>'Elon Musk appears to make back-to-back fascist Salutes' (The Guardian, 2025)
   </figcaption>
 </figure>
+
+As a discussion between the Anti-Defamation League (ADL), a non-governmental organization which fights against anti-semitism, and Elon Musk emerged publicly, whether Musk intended to do a Nazi or an ancient Roman salute, "in Germany, there was little doubt about [Elon Musk's salute's] meaning" (New York Times, 2025). Adding controversy, the dispute took place on Musk's own social media platform X, which had around 400 million users, and was accused of "hate speech and fake news" (The Guardian, 2025) regularly at that time. 
+
+The New York Times is right. We remember our eighth-grade history lessons in Germany vividly: our teacher made the whole class chant, in unison, “Never again” — a promise we made, literally. Memories like this stay with you because it carries a sense of collective responsibility. While not every German at the pre-second world war time was a Nazi, responsibility for what followed cannot be wholly separated from those who enabled and led the regime. At a certain point in history there was no easy return from the dismantling of democracy that followed the Nazis’ seizure of power. Today, watching the news, many Germans find those schoolroom lessons resurfacing. The worrying signs of a rise of a (far-)right in Italy, France, Poland and finally USA and Germany, dissolution of trade relationships, and a widescale remilitarization globally. Our research therefore aims to learn from history: we look for patterns and correlations in the data (carefully avoiding premature causal claims), because we bring a data-scientist’s discipline to historical material rather than the authority of a historian. Readers are invited to read between the lines and consider unsettling parallels with our own moment. Finally, while it is impossible to prove definitively, our analysis is consistent with the hypothesis that robust freedoms of expression and open public debate may have been, and may still be, crucial safeguards against the slide into authoritarianism.
 
 On the night February 27, 1933, the Reichstag burned, and Germany was in the midst of election campaigns for the upcoming vote in early March. Police and fire department officials identified the cause of the fire as arson, and the search for culprits began. The Reichspolizei arrested a young Dutch bricklayer (Marinus van der Lubbe), who confessed during interrogation, while one of the most influential parties at that time (the NSDAP) suspected a communist conspiracy. On February 28, President Hindenburg, at Hitler’s urging, issued the Reichstag Fire Decree, which suspended civil liberties and laid the groundwork for mass arrests and repressive measures primarily against communists and their organizations. These included the arrest of Reichstag member Ernst Torgler of the Kommunistische Partei Deutschlands (KPD). Torgler surrendered himself to the police, against the will of the KPD party leadership.
 
@@ -475,8 +479,9 @@ Taken together, these extensions could transform LLM-based stance analysis into 
 
 # References
 
+Pengelly, M. (2025, January 20). Elon Musk appears to make back-to-back fascist salutes at inauguration rally. The Guardian. https://www.theguardian.com/technology/2025/jan/20/trump-elon-musk-salute
 
-
+(2025, January 25). What Elon Musk's Salute Was All About. The New York Times. https://www.nytimes.com/2025/01/24/world/europe/elon-musk-roman-salute-nazi.html
 
 
 
