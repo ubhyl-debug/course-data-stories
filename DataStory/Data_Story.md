@@ -5,16 +5,21 @@ In recent years, the role of journalism in shaping public opinion, particularly 
 
 # Introduction/Motivation
 
-In Washington D. C. at Donald Trumps inauguration for his second US presidency on January 20, 2025, businessman and political figure Elon Musk made a salute, twice, that is illegal in Germany. Musk's gesture falls under the Anti-Defamation League (ADL)'s definition of a Nazi salute: raising his right arm, outstretched, palm down.
-
-<figure>
-  <p><a href="[https://www.deutsche-digitale-bibliothek.de](https://www.theguardian.com/technology/2025/jan/20/trump-elon-musk-salute)">
-    <img alt="Elon Musk at Trump's second inauguration" src="Elon_Musk.svg">
-  </a></p>
-  <figcaption>
-    <p>'Elon Musk appears to make back-to-back fascist Salutes' (The Guardian, 2025)
-  </figcaption>
-</figure>
+<div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+  <img src="Elon_Musk.svg" alt="Elon Musk at Trump's second inauguration"
+       style="width:280px;max-width:40%;height:auto;border-radius:4px;">
+  <div style="flex:1;min-width:220px;">
+    <p>
+      In Washington D. C. at Donald Trump’s inauguration for his second US presidency on
+      January 20, 2025, businessman and political figure Elon Musk made a salute twice,
+      which is illegal in Germany. Musk's gesture falls under the ADL's definition of a Nazi
+      salute: raising his right arm, outstretched, palm down.
+    </p>
+    <p style="font-size:0.9em;color:#666;">
+      <em>Source: The Guardian (2025)</em>
+    </p>
+  </div>
+</div>
 
 On the night February 27, 1933, the Reichstag burned, and Germany was in the midst of election campaigns for the upcoming vote in early March. Police and fire department officials identified the cause of the fire as arson, and the search for culprits began. The Reichspolizei arrested a young Dutch bricklayer (Marinus van der Lubbe), who confessed during interrogation, while one of the most influential parties at that time (the NSDAP) suspected a communist conspiracy. On February 28, President Hindenburg, at Hitler’s urging, issued the Reichstag Fire Decree, which suspended civil liberties and laid the groundwork for mass arrests and repressive measures primarily against communists and their organizations. These included the arrest of Reichstag member Ernst Torgler of the Kommunistische Partei Deutschlands (KPD). Torgler surrendered himself to the police, against the will of the KPD party leadership.
 
@@ -474,6 +479,7 @@ Linking stance shifts to historical events (RQ3): Our exploratory alignment of s
 Taken together, these extensions could transform LLM-based stance analysis into a robust instrument for media history research. Rather than replacing traditional scholarship, computational methods can act as a lens that helps historians navigate scale, surface new patterns, and refine questions about the interplay of press and politics in turbulent times.
 
 # References
+
 
 
 
