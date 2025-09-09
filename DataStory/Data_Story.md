@@ -5,13 +5,14 @@ In recent years, the role of journalism in shaping public opinion, particularly 
 
 # Introduction/Motivation
 
-In Washington D. C. at Donald Trumps inauguration for his second US presidency on January 20, 2025, businessman and political figure Elon Musk made a salute, twice, that is illegal in Germany. Musk's gesture falls under the Anti-Defamation League (ADL)'s definition of a Nazi salute.
+In Washington D. C. at Donald Trumps inauguration for his second US presidency on January 20, 2025, businessman and political figure Elon Musk made a salute, twice, that is illegal in Germany. Musk's gesture falls under the Anti-Defamation League (ADL)'s definition of a Nazi salute: raising his right arm, outstretched, palm down.
+
 <figure>
   <p><a href="[https://www.deutsche-digitale-bibliothek.de](https://www.theguardian.com/technology/2025/jan/20/trump-elon-musk-salute)">
     <img alt="Elon Musk at Trump's second inauguration" src="Elon_Musk.svg">
   </a></p>
   <figcaption>
-    <p>Elon Musk raising his right arm, outstretched and with a palm down 
+    <p>'Elon Musk appears to make back-to-back fascist Salutes' (The Guardian, 2025)
   </figcaption>
 </figure>
 
@@ -473,6 +474,7 @@ Linking stance shifts to historical events (RQ3): Our exploratory alignment of s
 Taken together, these extensions could transform LLM-based stance analysis into a robust instrument for media history research. Rather than replacing traditional scholarship, computational methods can act as a lens that helps historians navigate scale, surface new patterns, and refine questions about the interplay of press and politics in turbulent times.
 
 # References
+
 
 
 
