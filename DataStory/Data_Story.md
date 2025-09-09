@@ -422,15 +422,15 @@ In the case of the Hamburger Tageblatt, the data reveals a more supportive stanc
 
 To contextualize the monthly peaks, the graph was enriched with events from WikiData. For each peak, a long list of historical events from the corresponding month was automatically retrieved, from which relevant events were manually selected.
 
-## Comparison with established assessments
+## Comparison with established assessments and the freedom of speech
 
-When comparing the LLM-derived scores with established historians’ assessments of the newspapers, a strong correlation becomes apparent.
+When comparing the LLM-derived scores with established historians’ assessments of the newspapers, a strong correlation becomes apparent, finding common ground in the fact that there was no freedom of speech in journalism at that time.
 
-Vorwärts belonged to the German Social Democratic press and consistently opposed the rise of the National Socialist regime. This is reflected in its overall lower scores compared to the other two newspapers.
+Vorwärts belonged to the German Social Democratic press and consistently opposed the rise of the National Socialist regime. This is reflected in its overall lower scores compared to the other two newspapers. It is also the first of the newspapers examined, whose publication was discontinued.
 
-The opposite pattern can be observed in the Hamburger Tageblatt. Formed in January 1931 through the merger of several National Socialist newspapers in Hamburg, it openly supported the NSDAP. This alignment is clearly mirrored in its scores, which stand in sharp contrast to Vorwärts and also to the pre–seizure-of-power data for the Schwäbischer Merkur.
+The opposite pattern can be observed in the Hamburger Tageblatt. Formed and starting to publish in January 1931 through the merger of several National Socialist newspapers in Hamburg, it openly supported the NSDAP. This alignment is clearly mirrored in its scores, which stand in sharp contrast to Vorwärts and also to the pre–seizure-of-power data for the Schwäbischer Merkur.
 
-The Schwäbischer Merkur presents a more complex picture. Founded in 1785, it is the oldest of the three newspapers examined. With its conservative orientation in Württemberg, it was not initially part of the National Socialist press. Like many German newspapers, however, it faced increasing suppression and forced closures under the NS regime. Of the 179 daily newspapers in the Prussian administrative district of Hohenzollern in 1932, only 41 remained by late 1944. The Schwäbischer Merkur itself was discontinued in May 1941. While we could not identify academic sources explicitly confirming that the newspaper adopted a pro-NS stance after the seizure of power, the LLM scores reveal a clear upward shift beginning in 1933. This suggests an increasingly supportive tone, though still somewhat less pronounced than that of the openly pro-NS Hamburger Tageblatt.
+The Schwäbischer Merkur presents a more complex picture. Founded in 1785, it is the oldest of the three newspapers examined. With its conservative orientation in Württemberg, it was not initially part of the National Socialist press. Like many German newspapers, however, it faced increasing suppression and forced closures under the NS regime. Of the 179 daily newspapers in the Prussian administrative district of Hohenzollern in 1932, only 41 remained by late 1944. The Schwäbischer Merkur itself was discontinued in May 1941. While we could not identify academic sources explicitly confirming that the newspaper adopted a pro-NS stance after the seizure of power, the LLM scores reveal a clear upward shift beginning in 1933. This suggests an increasingly supportive tone, though still somewhat less pronounced than that of the openly pro-NS Hamburger Tageblatt. Given its previous conservative tone, it is suggested here that freedom of speech has been restricted before its discontinuance but after NSDAP's seizure of power.
 
 
 # Discussion and Conclusion
@@ -458,5 +458,6 @@ Improving stance measurement (RQ1): OCR quality remains a key bottleneck. Future
 Broadening temporal and newspaper comparisons (RQ2): While this study focused on three newspapers, the approach can be scaled to many more titles across the Deutsches Zeitungsportal. A wider comparison could reveal regional differences and shifts in local versus national reporting. Such scaling would also allow quantitative validation against established historiographical classifications of the press.
 
 Linking stance shifts to historical events (RQ3): Our exploratory alignment of stance peaks with WikiData events highlighted promising connections, but more systematic methods are needed. Future research could integrate additional historical datasets (e.g., election results, censorship decrees, or propaganda campaigns) to test whether observed stance shifts were statistically associated with key events. Closer collaboration with historians would further ensure that computational findings are grounded in nuanced historical interpretation.
+
 
 Taken together, these extensions could transform LLM-based stance analysis into a robust instrument for media history research. Rather than replacing traditional scholarship, computational methods can act as a lens that helps historians navigate scale, surface new patterns, and refine questions about the interplay of press and politics in turbulent times.
