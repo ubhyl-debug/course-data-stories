@@ -437,16 +437,17 @@ In the case of the Hamburger Tageblatt, the data reveals a more supportive stanc
 
 To contextualize the monthly peaks, the graph was enriched with events from WikiData. For each peak, a long list of historical events from the corresponding month was automatically retrieved, from which relevant events were manually selected.
 
-## Comparison with established assessments and the freedom of speech
+## Comparison with established assessments and the demolition of free-speech
 
-When comparing the LLM-derived scores with established historians’ assessments of the newspapers, a strong correlation becomes apparent, finding common ground in the fact that there was no freedom of speech in journalism at that time.
+When comparing the LLM-derived scores with established historians’ assessments of the newspapers, a strong correlation becomes apparent. For historians, the freedom of the press ended with Nazi Germany's passing the 'Schriftleitergesetz' (Editor’s Law) on October 4, 1933, which was saying "Editors are (...) bound to keep out of the newspapers anything which: (…) tends to weaken the strength of the German Reich, outwardly or inwardly (...)". Thus, any criticism towards the NSDAP would be seen as breaking the law. This law shows its effects in our analysis quickly, for example when the law came into effect on January 1, 1934, and many journalists lost their jobs, our analysis shows the paper Vorwärts stops publishing.
 
 Vorwärts belonged to the German Social Democratic press and consistently opposed the rise of the National Socialist regime. This is reflected in its overall lower scores compared to the other two newspapers. It is also the first of the newspapers examined, whose publication was discontinued.
 
 The opposite pattern can be observed in the Hamburger Tageblatt. Formed and starting to publish in January 1931 through the merger of several National Socialist newspapers in Hamburg, it openly supported the NSDAP. This alignment is clearly mirrored in its scores, which stand in sharp contrast to Vorwärts and also to the pre–seizure-of-power data for the Schwäbischer Merkur.
 
-The Schwäbischer Merkur presents a more complex picture. Founded in 1785, it is the oldest of the three newspapers examined. With its conservative orientation in Württemberg, it was not initially part of the National Socialist press. Like many German newspapers, however, it faced increasing suppression and forced closures under the NS regime. Of the 179 daily newspapers in the Prussian administrative district of Hohenzollern in 1932, only 41 remained by late 1944. The Schwäbischer Merkur itself was discontinued in May 1941. While we could not identify academic sources explicitly confirming that the newspaper adopted a pro-NS stance after the seizure of power, the LLM scores reveal a clear upward shift beginning in 1933. This suggests an increasingly supportive tone, though still somewhat less pronounced than that of the openly pro-NS Hamburger Tageblatt. Given its previous conservative tone, it is suggested here that freedom of speech has been restricted before its discontinuance but after NSDAP's seizure of power.
+The Schwäbischer Merkur presents a more complex picture. Founded in 1785, it is the oldest of the three newspapers examined. With its conservative orientation in Württemberg, it was not initially part of the National Socialist press. Like many German newspapers, however, it faced increasing suppression and forced closures under the NS regime. Of the 179 daily newspapers in the Prussian administrative district of Hohenzollern in 1932, only 41 remained by late 1944. The Schwäbischer Merkur itself was discontinued in May 1941. While we could not identify academic sources explicitly confirming that the newspaper adopted a pro-NS stance after the seizure of power, the LLM scores reveal a clear upward shift beginning in 1933. This suggests an increasingly supportive tone, though still somewhat less pronounced than that of the openly pro-NS Hamburger Tageblatt. 
 
+Given its previous conservative tone, it is suggested here that freedom of speech has been restricted before its discontinuance but after NSDAP's seizure of power.
 
 # Discussion and Conclusion
 
@@ -482,6 +483,7 @@ Taken together, these extensions could transform LLM-based stance analysis into 
 Pengelly, M. (2025, January 20). Elon Musk appears to make back-to-back fascist salutes at inauguration rally. The Guardian. https://www.theguardian.com/technology/2025/jan/20/trump-elon-musk-salute
 
 (2025, January 25). What Elon Musk's Salute Was All About. The New York Times. https://www.nytimes.com/2025/01/24/world/europe/elon-musk-roman-salute-nazi.html
+
 
 
 
