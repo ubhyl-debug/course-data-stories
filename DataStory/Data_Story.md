@@ -1,11 +1,11 @@
 
 # Abstract
 
-In recent years, the role of journalism in shaping public opinion, particularly in politically sensitive contexts, has drawn renewed attention. Modern debates about media responsibility, misinformation, and the influence of platform owners on public discourse provide a contemporary lens through which historical media coverage can be reexamined. This project draws on the Deutsches Zeitungsportal, a comprehensive archive of historical German newspapers, to investigate how journalism responded to the political transformation in Germany during the early 1930s. Using Large Language Models (LLMs), we aim to analyze and classify the stance of newspaper articles toward the NSDAP, reducing the need for exhaustive manual reading. This approach was motivated by a combination of personal interest in journalism and an initial observation of contradictory reporting surrounding the arrest of an SPD politician, highlighting the potential of computational methods to surface patterns and tensions in historical media landscapes.
+The role of journalism in shaping public opinion—especially in politically volatile contexts—has become a renewed subject of debate in light of current concerns over misinformation, media accountability, and the influence of platform ownership. These contemporary issues provide a valuable lens for reexamining the historical function of the press. In this project, we analyze how German newspapers responded to the political transformation leading up to the Nazi regime in the early 1930s. Drawing on the Deutsches Zeitungsportal, a large archive of digitized historical newspapers, we employ Large Language Models (LLMs) to automatically classify articles based on their stance toward the NSDAP. This computational approach reduces the need for manual content analysis and enables large-scale pattern discovery. The project was inspired by a personal interest in journalism and the discovery of contradictory reporting on the 1933 arrest of an SPD politician, underscoring the value of using digital methods to explore the complex and often polarized media landscape of that era.
 
 # Introduction/Motivation
 
-In Washington D. C. at Donald Trumps inauguration for his second US presidency on January 20, 2025, businessman and political figure Elon Musk made a salute, twice, that is illegal in Germany. This is because Musk's gesture falls under the definition of a Nazi salute: raising the right arm, outstretched, palm down.
+On January 20, 2025, during the second inauguration of Donald Trump in Washington D.C., businessman and political figure Elon Musk made a gesture that quickly sparked global controversy. This is because Musk's gesture falls under the definition of a Nazi salute: raising the right arm, outstretched, palm down.
 
 <figure>
   <p><a href="[https://www.deutsche-digitale-bibliothek.de](https://www.theguardian.com/technology/2025/jan/20/trump-elon-musk-salute)">
@@ -16,11 +16,13 @@ In Washington D. C. at Donald Trumps inauguration for his second US presidency o
   </figcaption>
 </figure>
 
-As a discussion between the Anti-Defamation League (ADL), a non-governmental organization which fights against anti-semitism, and Elon Musk emerged publicly, whether Musk intended to do a Nazi or an ancient Roman salute, "in Germany, there was little doubt about [Elon Musk's salute's] meaning" (New York Times, 2025). Adding controversy, the dispute took place on Musk's own social media platform X, which had around 400 million users, and was accused of "hate speech and fake news" (The Guardian, 2025) regularly at that time. 
+While some claimed Musk was invoking the Roman salute, prominent media outlets and public discourse, particularly in Germany, left little doubt about the gesture’s connotation. As the New York Times noted, “In Germany, there was little doubt about [Elon Musk’s salute’s] meaning.” The incident gained further visibility because the ensuing debate unfolded on Musk’s own platform, X, which by then had over 400 million users and was frequently criticized for hosting hate speech and misinformation (The Guardian, 2025). 
 
-The New York Times is right. We remember our eighth-grade history lessons in Germany vividly: our teacher made the whole class chant, in unison, “Never again” — a promise we made, literally. Memories like this stay with you because it carries a sense of collective responsibility. While not every German at the pre-second world war time was a Nazi, responsibility for what followed cannot be wholly separated from those who enabled and led the regime. At a certain point in history there was no easy return from the dismantling of democracy that followed the Nazis’ seizure of power. Today, watching the news, many Germans find those schoolroom lessons resurfacing. The worrying signs of a rise of a (far-)right in Italy, France, Poland and finally USA and Germany, dissolution of trade relationships, and a widescale remilitarization globally. Our research therefore aims to learn from history: we look for patterns and correlations in the data (carefully avoiding premature causal claims), because we bring a data-scientist’s discipline to historical material rather than the authority of a historian. Readers are invited to read between the lines and consider unsettling parallels with our own moment. Finally, while it is impossible to prove definitively, our analysis is consistent with the hypothesis that robust freedoms of expression and open public debate may have been, and may still be, crucial safeguards against the slide into authoritarianism.
+For many Germans, the moment triggered familiar discomfort. It reminded us of a promise made in school—when, in 8th-grade history lessons, we collectively chanted “Nie wieder” (“Never again”). This phrase symbolized our country’s post-war commitment to learn from history, to protect democracy, and to never allow the conditions that led to fascism and war to return. We understand that not every German in the 1930s was a Nazi—but history has shown that silence, complicity, and media manipulation contributed to the dismantling of democracy and the rise of dictatorship. Today, similar warning signs are visible in many democracies: the growing influence of the far right, erosion of democratic norms, the remilitarization of international politics, and the weakening of public discourse. This research project aims to apply data science methods to a historical dataset in order to understand how journalism responded to the rise of authoritarianism in the past—and what lessons this might offer for today. While we make no causal claims, our hypothesis is that patterns of press alignment and suppression can be observed through careful computational analysis of historical media.
 
-On the night February 27, 1933, the Reichstag burned, and Germany was in the midst of election campaigns for the upcoming vote in early March. Police and fire department officials identified the cause of the fire as arson, and the search for culprits began. The Reichspolizei arrested a young Dutch bricklayer (Marinus van der Lubbe), who confessed during interrogation, while one of the most influential parties at that time (the NSDAP) suspected a communist conspiracy. On February 28, President Hindenburg, at Hitler’s urging, issued the Reichstag Fire Decree, which suspended civil liberties and laid the groundwork for mass arrests and repressive measures primarily against communists and their organizations. These included the arrest of Reichstag member Ernst Torgler of the Kommunistische Partei Deutschlands (KPD). Torgler surrendered himself to the police, against the will of the KPD party leadership.
+# Historical background
+
+A particularly illustrative case occurred on February 27, 1933: the Reichstag fire. As Germany approached critical elections, the German parliament building burned down. Authorities blamed the act on Marinus van der Lubbe, a Dutch communist who confessed under interrogation. However, the National Socialist German Workers' Party (NSDAP) framed the event as evidence of a broader communist conspiracy. The next day, President Paul von Hindenburg signed the Reichstag Fire Decree, suspending civil liberties and enabling mass arrests, particularly targeting communists. Among the arrested was Ernst Torgler, a Reichstag member from the Communist Party (KPD), who turned himself in despite opposition from party leadership.
 
 The reporting in newspapers of that time on the arrest of Torgler differed significantly. NSDAP-aligned newspapers, such as the Hamburger Tageblatt, presented Ernst Torgler as a key suspect in the Reichstag fire, citing alleged eyewitness testimonies and framing his arrest as proof of communist involvement. By casting the communists as an immediate threat, the NSDAP sought to boost its own popularity and rally public support behind its policies. In contrast, newspapers closely connected to left-leaning parties, such as the Sozialdemokrat, focused more on the repression of communists and their organizations. Furthermore, the Sozialdemokrat criticized the involvement of the NSDAP organizations SA and SS within the Reichspolizei. From these differing reports, it is possible to derive an impression of a newspaper’s stance toward the NSDAP.
 
@@ -42,7 +44,7 @@ The reporting in newspapers of that time on the arrest of Torgler differed signi
     „Die Untersuchung hat weiter ergeben, daß drei Augenzeugen einige Stunden vor Ausbruch des Brandes den verhafteten holländischen Täter in Begleitung der kommunistischen Abgeordneten Torgler und Koenen in den Gängen des Reichstages gesehen haben.
     Ein Irrtum der Augenzeugen ist bei dem Aussehen des Brandstifters unmöglich. Da weiterhin der Abgeordneten-Eingang des Reichstages um 8 Uhr abends geschlossen wird, die kommunistischen Abgeordneten Torgler und Koenen sich jedoch gegen 8.30 Uhr ihre Garderobe in ihre Zimmer bringen ließen und erst gegen 10 Uhr durch ein anderes Portal den Reichstag verließen, besteht gegen diese beiden Kommunisten dringender Tatverdacht. In dieser Zeit ist nämlich der Brand angelegt worden.“ <br>
     <a href="https://www.deutsche-digitale-bibliothek.de/newspaper/item/Y353SVCH47W4O2ARVT2OCCFV3RPVCFRL?issuepage=3" >
-      link Hamburger Tagblatt
+      Hamburger Tagblatt
     </a>
   </div>
 
@@ -50,37 +52,43 @@ The reporting in newspapers of that time on the arrest of Torgler differed signi
     <strong>Excerpt from the Sozialdemokrat newspaper:</strong> <br>
     "Damit ist die Einreihung der SA- und SS-Banden, die ungezählte Morde und Terrorakte auf dem Gewissen haben, in den amtlichen Polizeiapparat mundgerecht gemacht. Und nun kommt der Hauptschlag gegen die marxistische Linke: Gegen führende kommunistische Reichstagsabgeordnete wurde wegen angeblichen Tatverdachts Haftbefehl erlassen, die übrigen Abgeordneten und Funktionäre der Partei wurden in Schutzhast genommen. Das ‚rechtfertigt‘ selbstverständlich die ungeheuerlichste Knebelung der Pressefreiheit, denn sämtliche kommunistischen Zeitungen, Zeitschriften, Flugblätter und Plakate sind verboten. Zudem trifft die Notverordnung ‚zum Schutz von Volk und Staat‘, die praktisch dem Standrecht gleichkommt, die gesamte Arbeiterbewegung, indem sie mit Terror, Verboten und Todesstrafe jeden Widerstand ersticken soll." <br>
     <a href="https://www.deutsche-digitale-bibliothek.de/newspaper/item/YGFEXVVB2W6EJGDT4ZJUOJRJL6VDRPZ4?issuepage=1" >
-      link Sozialdemokrat
+      Sozialdemokrat
     </a>
   </div>
 </div>
 
 <br>
 
-To derive the stance of newspapers from that time, a sufficiently large dataset is required. Such data is available through the [Deutsche Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper) a service of the German Digital Library that provides free access to historical newspapers collected from German cultural and scientific institutions. The portal currently hosts more than 1,931 newspaper titles comprising over 25 million pages, with particularly rich coverage of the early 20th century. 
+# The role of digital archives
+
+To analyze these differences at scale, we turned to the [Deutsches Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper), a service of the German Digital Library that provides free access to historical newspapers collected from German cultural and scientific institutions. The portal currently hosts more than 1,931 newspaper titles comprising over 25 million pages, with particularly rich coverage of the early 20th century. 
 
 <figure>
   <p><a href="https://www.deutsche-digitale-bibliothek.de/assets/dzp-logo-lg-rgb-ef2b5467392b95453fad9602155430d8.svg">
     <img alt="Logo des Deutschen Zeitungsportals" src="Deutsche_Zeitungsportal_logo.svg">
   </a></p>
   <figcaption>
-    <p>Logo of the Deutschen Zeitungsportals
+    <p>Logo of the "Deutsches Zeitungsportal"
   </figcaption>
 </figure>
 
 
 This rich data source allows for multiple potential analyses, providing, for example, deeper insights into the general public portrayal of political events. However, utilizing such large amounts of data involves an an overwhelming amount of manual effort if done by humans. This is where Large Language Models come in handy. These models are capable of understanding textual context and thus can be utilized to assist in analyzing large numbers of news articles.
 
-The data story focuses on analyzing how historical newspapers positioned themselves toward the NSDAP during its rise in the early 1930s. This focus stems from the central role the party played in shaping Germany’s political landscape and the relevance of understanding how media outlets reported on its activities and ideology. By employing large language models (LLMs) to estimate the sentiment or orientation of articles in relation to the party. This approach allows us to identify how perspectives may have shifted over time, especially around key political and societal events. Rather than interpreting or judging the content, the focus is on detecting patterns in the data to better understand how the press reflected or responded to developments during this pivotal historical period.
+While this archive offers incredible potential, analyzing millions of articles manually is infeasible. This is where modern Large Language Models (LLMs) offer new opportunities. These models can interpret textual meaning and context, allowing us to estimate how newspapers reported on the NSDAP over time. By quantifying stance—without the need for exhaustive manual classification—we can identify patterns across time and publications that reflect the evolving political climate.
 
+# Project focus
+
+This project investigates how historical newspapers positioned themselves toward the NSDAP during its rise to power in the 1930s. Our aim is not to reinterpret historical facts, but to develop a computational method for detecting press alignment through text classification using LLMs. This allows us to observe shifts in sentiment over time and between outlets—especially in reaction to key political events.
+The combination of natural language processing, knowledge graph integration (e.g., historical events from WikiData), and digital cultural archives exemplifies how data science can enrich historical research. As we reexamine journalism’s role in shaping political narratives, we are also reminded that the questions posed by the past—about freedom of expression, bias, and responsibility—remain pressing today.
 
 # Research questions
 
 The Data Story research questions are separated into three different questions:
 
-1. How can the stance of historical newspapers towards the NSDAP be measured?
-2. How did the stance change over time and in comparison to other newspapers?
-3. Which historical events can be linked to trends and changes in stance?
+1. Do newspapers with different political affiliations exhibit distinct stance trajectories toward the NSDAP over time?
+2. How did the stance of major German newspapers toward the NSDAP change before and after the party’s rise to power in 1933?
+3. Which key historical events correlate with significant shifts in newspaper sentiment toward the NSDAP across different publications?
 
 
 
@@ -451,17 +459,37 @@ Given its previous conservative tone, it is suggested here that freedom of speec
 
 # Discussion and Conclusion
 
-This project set out to address three central research questions:
-
-RQ1: How can the stance of historical newspapers towards the NSDAP be measured?
 We demonstrated that modern LLMs can provide a scalable way of estimating stance across tens of thousands of historical articles. By framing stance as a numerical score ranging from critical (–2) to supportive (+2), we operationalized a consistent classification scheme. This approach enabled us to move beyond anecdotal case studies toward systematic, data-driven comparisons. At the same time, OCR quality issues and the lack of a ground truth remain major challenges, introducing uncertainty into the scoring. Future work should refine preprocessing and validation methods to improve robustness.
 
-RQ2: How did the stance change over time and in comparison to other newspapers?
-Our analysis revealed clear contrasts between the three selected newspapers. Vorwärts consistently opposed the NSDAP until its forced closure in early 1933, while the Hamburger Tageblatt reflected its alignment with the party through supportive scores after its founding in 1931. The Schwäbischer Merkur displayed a more complex trajectory—largely neutral before 1933 but increasingly supportive thereafter. These findings correspond closely with established historical interpretations and illustrate that LLM-based stance detection can capture temporal and cross-newspaper differences in alignment.
+Distinct Stance Trajectories by Political Affiliation (RQ1)
+When analyzing stance across newspapers with differing political affiliations, clear distinctions emerge.
+Vorwärts, a Social Democratic newspaper, consistently exhibited a critical stance toward the NSDAP. Its opposition grew stronger leading up to the Nazi seizure of power, after which the paper was banned. Its last issue was published on February 28, 1933, the day after the Reichstag fire.
+Hamburger Tageblatt, formed through the merger of several National Socialist outlets in January 1931, displayed the most supportive stance toward the NSDAP across the entire observation period, with scores significantly above neutral.
+Schwäbischer Merkur, a conservative but initially independent regional newspaper, showed a more nuanced profile. Before 1933, scores hovered around zero, suggesting neutral or non-political reporting. After 1933, however, stance scores began to rise, indicating either increasing alignment with NSDAP narratives or growing pressure on editorial independence.
+This divergence in trajectory supports RQ1: Newspapers with different political affiliations did, in fact, exhibit distinct stance developments over time—ranging from opposition to alignment.
 
-RQ3: Which historical events can be linked to trends and changes in stance?
-By aligning peaks and shifts in stance scores with events retrieved from WikiData, we identified potential correlations between press tone and historical developments. For example, the Reichstag fire and subsequent repression of opposition parties coincided with the silencing of Vorwärts and a shift in the tone of other newspapers. While such correlations do not imply causation, they provide valuable leads for historians seeking to explore how specific events shaped media narratives.
+Change in Stance Before and After 1933 (RQ2)
+The year 1933 marks a clear inflection point in press alignment.
+Vorwärts, previously highly oppositional, ceased publication entirely following the Reichstag Fire Decree and ensuing repression of leftist voices.
+Schwäbischer Merkur, which had remained relatively neutral prior to 1933, began trending more positively toward the NSDAP, though it never reached the same level of alignment as openly pro-Nazi newspapers.
+Hamburger Tageblatt entered the press landscape shortly before the regime change and maintained a highly supportive tone throughout, until its cessation in August 1944.
+This shift is consistent with known historical developments: The passage of the Editor’s Law (Schriftleitergesetz) on October 4, 1933, formally ended press freedom by prohibiting publications from weakening the Reich. It went into full effect on January 1, 1934, after which many independent journalists were removed. These legislative and political developments are reflected in the data, offering compelling evidence for RQ2: Newspapers changed their stance markedly before and after the NSDAP's rise to power.
 
+Correlations Between Historical Events and Stance Shifts (RQ3)
+To investigate RQ3, stance scores were plotted over time and aligned with events retrieved from WikiData. Notable correlations include:
+A significant drop in oppositional content after the Reichstag fire (Feb 1933) and Reichstag Fire Decree.
+A clear decline in diversity of reporting after the Editor’s Law came into force in 1934.
+Periodic peaks of supportive sentiment in pro-NS papers align with major Nazi propaganda events such as the annexation of Austria (1938) and the outbreak of WWII (1939).
+An interactive time series graph was enriched with manually selected events, offering historical context to sentiment peaks and shifts. While correlation does not imply causation, the evidence suggests that key political events had a measurable impact on press sentiment—validating RQ3.
+
+Comparison with Historical Assessments
+When compared to established historical analyses, the results from our LLM-based stance detection show strong alignment:
+Vorwärts is widely documented as anti-NSDAP and was banned early—reflected in its consistently low scores.
+Hamburger Tageblatt was part of the National Socialist press and scored highly supportive.
+Schwäbischer Merkur presents a more complex case. Though not officially aligned, increasing positive scores after 1933 suggest a loss of independence under growing regime control—matching historical accounts of editorial suppression.
+In 1932, 179 daily newspapers operated in the Prussian administrative district of Hohenzollern. By late 1944, only 41 remained. This collapse of press pluralism is mirrored in the reduced variation of stance scores over time.
+
+Integration of technological tools into the research process
 Overall, this project demonstrates the potential of computational methods for assisting historiographical research. LLMs are not replacements for close reading but can serve as exploratory tools that surface patterns, anomalies, and new questions across otherwise unmanageable corpora. The main limitations remain OCR noise, the difficulty of validating stance scores, and the sensitivity of models to implicit political rhetoric. Nevertheless, this study illustrates how digital methods can complement traditional scholarship in exploring the role of journalism during one of Germany’s most politically transformative periods.
 
 
@@ -469,20 +497,20 @@ Overall, this project demonstrates the potential of computational methods for as
 
 Building on the findings of this project, several directions for future research emerge, each linked to the three guiding research questions:
 
-Improving stance measurement (RQ1): OCR quality remains a key bottleneck. Future work should integrate more advanced OCR engines, such as recently released tools optimized for Fraktur script. Additionally, fine-tuning LLMs on historical German corpora could make detection more sensitive to period-specific vocabulary and rhetoric.
+OCR quality remains a key bottleneck. Future work should integrate more advanced OCR engines, such as recently released tools optimized for Fraktur script. Additionally, fine-tuning LLMs on historical German corpora could make detection more sensitive to period-specific vocabulary and rhetoric. Subsequently, the basis of answering the research questions, assessing the stance towards the NSDAP, would be more accurately.
 
-Broadening temporal and newspaper comparisons (RQ2): While this study focused on three newspapers, the approach can be scaled to many more titles across the Deutsches Zeitungsportal. A wider comparison could reveal regional differences and shifts in local versus national reporting. Such scaling would also allow quantitative validation against established historiographical classifications of the press.
+While this study focused on three newspapers, the approach can be scaled to many more titles across the Deutsches Zeitungsportal. A wider comparison could reveal regional differences and shifts in local versus national reporting. Such scaling would also allow quantitative validation against established historiographical classifications of the press. Thus, the scope of sample on which the results are derived would be bigger and the significance of observations would be improved.
 
 Linking stance shifts to historical events (RQ3): Our exploratory alignment of stance peaks with WikiData events highlighted promising connections, but more systematic methods are needed. Future research could integrate additional historical datasets (e.g., election results, censorship decrees, or propaganda campaigns) to test whether observed stance shifts were statistically associated with key events. Closer collaboration with historians would further ensure that computational findings are grounded in nuanced historical interpretation.
 
-
-Taken together, these extensions could transform LLM-based stance analysis into a robust instrument for media history research. Rather than replacing traditional scholarship, computational methods can act as a lens that helps historians navigate scale, surface new patterns, and refine questions about the interplay of press and politics in turbulent times.
+Together, these extensions have the potential to transform LLM-based stance analysis into a powerful and scalable instrument—not only for historical media research but also for contemporary media monitoring. The tools and workflows developed in this project are generalizable and can be applied to other historical corpora with minimal adaptation. More importantly, by automating the evaluation of press alignment and sentiment, the methodology lays the groundwork for real-time media assessment. Validated on historical data where outcomes are known, this framework could be adapted to track press or platform sentiment in ongoing political developments. Rather than replacing traditional scholarship, computational methods serve as a complementary lens—enabling researchers to scale their analyses, detect patterns that would be invisible to manual review, and refine critical questions about the role of journalism in shaping public discourse, both then and now.
 
 # References
 
 Pengelly, M. (2025, January 20). Elon Musk appears to make back-to-back fascist salutes at inauguration rally. The Guardian. https://www.theguardian.com/technology/2025/jan/20/trump-elon-musk-salute
 
 (2025, January 25). What Elon Musk's Salute Was All About. The New York Times. https://www.nytimes.com/2025/01/24/world/europe/elon-musk-roman-salute-nazi.html
+
 
 
 
