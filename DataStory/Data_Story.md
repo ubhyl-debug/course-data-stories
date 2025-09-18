@@ -16,7 +16,7 @@ On January 20, 2025, during the second inauguration of Donald Trump in Washingto
   </figcaption>
 </figure>
 
-While some claimed Musk was invoking the Roman salute, prominent media outlets and public discourse, particularly in Germany, left little doubt about the gesture’s connotation. As the New York Times noted, “In Germany, there was little doubt about [Elon Musk’s salute’s] meaning.” The incident gained further visibility because the ensuing debate unfolded on Musk’s own platform, X, which by then had over 400 million users and was frequently criticized for hosting hate speech and misinformation (The Guardian, 2025). 
+While some claimed Musk was invoking the Roman salute, prominent media outlets and public discourse, particularly in Germany, left little doubt about the gesture’s connotation. As the New York Times noted, “In Germany, there was little doubt about [Elon Musk’s salute’s] meaning” (New York Times, 2025). The incident gained further visibility because the ensuing debate unfolded on Musk’s own platform, X, which by then had over 400 million users and was frequently criticized for hosting hate speech and misinformation (The Guardian, 2025). 
 
 For many Germans, the moment triggered familiar discomfort. It reminded us of a promise made in school—when, in 8th-grade history lessons, we collectively chanted “Nie wieder” (“Never again”). This phrase symbolized our country’s post-war commitment to learn from history, to protect democracy, and to never allow the conditions that led to fascism and war to return. We understand that not every German in the 1930s was a Nazi—but history has shown that silence, complicity, and media manipulation contributed to the dismantling of democracy and the rise of dictatorship. Today, similar warning signs are visible in many democracies: the growing influence of the far right, erosion of democratic norms, the remilitarization of international politics, and the weakening of public discourse. This research project aims to apply data science methods to a historical dataset in order to understand how journalism responded to the rise of authoritarianism in the past—and what lessons this might offer for today. While we make no causal claims, our hypothesis is that patterns of press alignment and suppression can be observed through careful computational analysis of historical media.
 
@@ -510,6 +510,7 @@ Together, these extensions have the potential to transform LLM-based stance anal
 Pengelly, M. (2025, January 20). Elon Musk appears to make back-to-back fascist salutes at inauguration rally. The Guardian. https://www.theguardian.com/technology/2025/jan/20/trump-elon-musk-salute
 
 (2025, January 25). What Elon Musk's Salute Was All About. The New York Times. https://www.nytimes.com/2025/01/24/world/europe/elon-musk-roman-salute-nazi.html
+
 
 
 
