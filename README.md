@@ -6,15 +6,16 @@ Academy of Sciences and Literature, Mainz
 
 ## Instructions
 
-To start writing your own data story, please follow these steps:
+This GitHub repository contains the data story "Reading between the Lines", which was created during the summer semester 2025 in the course "Telling Data Stories with Semantic Technologies and Generative AI". 
 
-1. **Clone the repository**: Clone this repository to your local machine using the following command:
+📂 stories              → Final data story and resources  
+📂 api_fetch_and_filters → Scripts for data sourcing & filtering (chronologically ordered)  
+📂 Mistral_code          → Code for calling the Mistral model, visualization & enrichment  
+📂 OCR_error_code        → Handling OCR errors, as described in the story  
+📂 _Archiv               → Additional resources used during exploration (not required for reproducing results)  
 
-   ```bash
-   git clone git@github.com:ISE-FIZKarlsruhe/course-data-stories.git
-   ```
 
-2. **Start the Shmarql container with docker compose**: Navigate to the cloned repository and and run the following command:
+1. **Start the Shmarql container with docker compose**: Navigate to the cloned repository and and run the following command:
    ```bash
    cd course-data-stories && docker compose up -d
    ```
@@ -27,6 +28,7 @@ Try to create a new file named 'index.md' in the 'stories' folder. You can fill 
 following page in your browser: http://localhost:7015/course/
 
 This should show the text that was just entered in the 'index.md' file you created.
+
 
 ## More details
 
