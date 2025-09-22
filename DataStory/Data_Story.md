@@ -511,10 +511,22 @@ Pengelly, M. (2025, January 20). Elon Musk appears to make back-to-back fascist 
 
 (2025, January 25). What Elon Musk's Salute Was All About. The New York Times. https://www.nytimes.com/2025/01/24/world/europe/elon-musk-roman-salute-nazi.html
 
+(01. March 1933). Hamburger Tageblatt : Zeitung der Nationalsozialistischen Deutschen Arbeiterpartei. Deutsches Zeitungsportal. https://www.deutsche-digitale-bibliothek.de/newspaper/item/Y353SVCH47W4O2ARVT2OCCFV3RPVCFRL?issuepage=3
 
+(01. March 1933). Sozialdemokrat. Deutsches Zeitungsportal. https://www.deutsche-digitale-bibliothek.de/newspaper/item/YGFEXVVB2W6EJGDT4ZJUOJRJL6VDRPZ4?issuepage=1
 
+(2025, August 15). Logo Deutsches Zeitungsportal. https://www.deutsche-digitale-bibliothek.de/assets/dzp-logo-lg-rgb-ef2b5467392b95453fad9602155430d8.svg
 
+(2025, July 31). Logo Pandas. wikimedia.org. https://commons.wikimedia.org/wiki/File:Pandas_logo.svg
 
+(2025, July 31). Logo WikiData. wikipedia.org. https://de.wikipedia.org/wiki/Wikidata#/media/Datei:Wikidata-logo-en.svg
 
+(2025, July 31). Logo Mistral. Mistral AI. https://mistral.ai/brand
+
+(2025, July 31). Logo NFDI4Culture. nfdi4culture. https://nfdi4culture.de/typo3temp/assets/build/images/n4c-logo-black.4b9cb10d.svg
+
+(1963, March 16). Der Motor : Zeitung der Dieselmotorenwerk Rostock GmbH. Deutsches Zeitungsportal. https://www.deutsche-digitale-bibliothek.de/newspaper/item/YGFEXVVB2W6EJGDT4ZJUOJRJL6VDRPZ4?issuepage=1
+
+(1936, November 13). Bergische Wacht. 1907-1941. Deutsches Zeitungsportal. https://www.deutsche-digitale-bibliothek.de/newspaper/item/OBFCRDFM4NLVYKD6MDK2IQCIA7SHSBQ6?issuepage=1
 
 
