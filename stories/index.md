@@ -340,7 +340,7 @@ LIMIT 500
 
 #### Challenges in OCR
 
-In the course of our analysis, we identified quality issues in the OCR (Optical Character Recognition) texts provided by the [Deutsche Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper). OCR (Optical Character Recognition) is a process that converts handwritten or printed text from images into machine-readable text. It is widely used and enables, for example, historians to scan pages of old historical books to extract their text.
+In the course of our analysis, we identified quality issues in the OCR (Optical Character Recognition) texts provided by the [Deutsche Zeitungsportal](https://www.deutsche-digitale-bibliothek.de/newspaper). OCR is a process that converts handwritten or printed text from images into machine-readable text. It is widely used and enables, for example, historians to scan pages of old historical books to extract their text.
 
 ![alt text](OCR_exsample.svg)
 
